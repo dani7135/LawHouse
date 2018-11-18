@@ -11,12 +11,17 @@ using Businesslogi;
 
 namespace LawHouse
 {
-    public partial class Form1 : Form
+    public partial class New_case : Form
     {
         
-        public Form1()
+        public New_case()
         {
             InitializeComponent();
+        }
+
+        private void btn_Create_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

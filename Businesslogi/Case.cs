@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Database;
+
 namespace Businesslogi
 {
-    
-    public class Options
+    class Case
     {
-        Cases cases = new Cases();
+
     }
 }

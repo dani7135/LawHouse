@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Businesslogi;
+using BusinessLogic;
 
 namespace LawHouse
 {
     public partial class New_case : Form
     {
-        
+
         public New_case()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace LawHouse
 
         private void btn_Create_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

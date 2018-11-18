@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Database;
-namespace Businesslogi
+using DataAccess;
+namespace BusinessLogic
 {
-    
+
     public class Controller
     {
-        Database.Database CasesDatabase = new Database.Database();
 
-        public void CreateCase()
+        static Database database { get; set; }
+        public Controller()
         {
-            CasesDatabase.CreateCase( )
+            database = Database.Instance();
         }
+
+
     }
 }

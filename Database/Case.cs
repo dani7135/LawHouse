@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Database
+namespace DataAccess
 {
-   public class Case
+    public class Case
     {
         public string SagsNr { get; set; }
         public string Arbejdstitel { get; set; }

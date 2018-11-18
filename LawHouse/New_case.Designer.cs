@@ -49,7 +49,7 @@
             // 
             // btn_Create
             // 
-            this.btn_Create.Location = new System.Drawing.Point(453, 377);
+            this.btn_Create.Location = new System.Drawing.Point(326, 377);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(128, 45);
             this.btn_Create.TabIndex = 0;
@@ -114,56 +114,56 @@
             // txt_nr
             // 
             this.txt_nr.Enabled = false;
-            this.txt_nr.Location = new System.Drawing.Point(246, 58);
+            this.txt_nr.Location = new System.Drawing.Point(130, 53);
             this.txt_nr.Name = "txt_nr";
             this.txt_nr.Size = new System.Drawing.Size(100, 22);
             this.txt_nr.TabIndex = 7;
             // 
             // txt_kørsel
             // 
-            this.txt_kørsel.Location = new System.Drawing.Point(246, 264);
+            this.txt_kørsel.Location = new System.Drawing.Point(130, 264);
             this.txt_kørsel.Name = "txt_kørsel";
             this.txt_kørsel.Size = new System.Drawing.Size(100, 22);
             this.txt_kørsel.TabIndex = 8;
             // 
             // txt_titel
             // 
-            this.txt_titel.Location = new System.Drawing.Point(246, 108);
+            this.txt_titel.Location = new System.Drawing.Point(130, 108);
             this.txt_titel.Name = "txt_titel";
             this.txt_titel.Size = new System.Drawing.Size(100, 22);
             this.txt_titel.TabIndex = 9;
             // 
             // txt_time
             // 
-            this.txt_time.Location = new System.Drawing.Point(246, 313);
+            this.txt_time.Location = new System.Drawing.Point(130, 313);
             this.txt_time.Name = "txt_time";
             this.txt_time.Size = new System.Drawing.Size(100, 22);
             this.txt_time.TabIndex = 10;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(246, 163);
+            this.dateTimePicker1.Location = new System.Drawing.Point(130, 158);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(246, 214);
+            this.dateTimePicker2.Location = new System.Drawing.Point(130, 214);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 12;
             // 
             // ArbejderNr
             // 
-            this.ArbejderNr.Location = new System.Drawing.Point(246, 400);
+            this.ArbejderNr.Location = new System.Drawing.Point(130, 400);
             this.ArbejderNr.Name = "ArbejderNr";
             this.ArbejderNr.Size = new System.Drawing.Size(100, 22);
             this.ArbejderNr.TabIndex = 16;
             // 
             // Klientnr
             // 
-            this.Klientnr.Location = new System.Drawing.Point(246, 356);
+            this.Klientnr.Location = new System.Drawing.Point(130, 356);
             this.Klientnr.Name = "Klientnr";
             this.Klientnr.Size = new System.Drawing.Size(100, 22);
             this.Klientnr.TabIndex = 15;
@@ -192,7 +192,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(657, 438);
+            this.ClientSize = new System.Drawing.Size(484, 438);
             this.Controls.Add(this.ArbejderNr);
             this.Controls.Add(this.Klientnr);
             this.Controls.Add(this.label7);

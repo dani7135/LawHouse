@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LawHouse", "LawHouse\LawHou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Businesslogi", "Businesslogi\Businesslogi.csproj", "{A51B7AFC-8D03-4ED9-B0A3-D3E97714D17B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Database.csproj", "{A46D458F-18FF-466A-BFA9-687B1C61C885}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "Database\DataAccess.csproj", "{A46D458F-18FF-466A-BFA9-687B1C61C885}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

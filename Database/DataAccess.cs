@@ -6,12 +6,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Database
+namespace DataAccess
 {
-   
-  public  class Database
+    //Singletone er blevet brugt nedenunder og i kontrolleren
+    public class Database
     {
-        public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat)
+        private static Database _database = null;
+        private Database() { }
+        public static Database Instance()
+        {
+            if (_database == null)
+            {
+                _database = new Database();
+
+            }
+            return _database;
+        }
+        public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat)
         {
             Case c = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat);
             using (var conn = new SqlConnection(Properties.Settings.Default.Constring))
@@ -26,9 +37,9 @@ namespace Database
                 com.ExecuteNonQuery();
             }
         }
-        public static void CreateCase(Case c)
+        public void CreateCase(Case c)
         {
-             using (var conn = new SqlConnection(Properties.Settings.Default.Constring))
+            using (var conn = new SqlConnection(Properties.Settings.Default.Constring))
             {
                 SqlCommand com = new SqlCommand();
                 com.Connection = conn;
@@ -40,7 +51,7 @@ namespace Database
                 com.ExecuteNonQuery();
             }
         }
-        public static DataTable GetAllCases()
+        public DataTable GetAllCases()
         {
             using (SqlConnection conn = new SqlConnection
                 (Properties.Settings.Default.Constring))

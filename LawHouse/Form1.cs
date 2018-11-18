@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Businesslogi;
 
 namespace LawHouse
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();

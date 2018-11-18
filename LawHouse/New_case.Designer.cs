@@ -1,4 +1,4 @@
-﻿namespace LawHouse
+﻿namespace GUI
 {
     partial class New_case
     {
@@ -41,8 +41,8 @@
             this.txt_time = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.ArbejderNr = new System.Windows.Forms.TextBox();
-            this.Klientnr = new System.Windows.Forms.TextBox();
+            this.txt_MedarbejderNr = new System.Windows.Forms.TextBox();
+            this.txt_Klientnr = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -154,19 +154,19 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 12;
             // 
-            // ArbejderNr
+            // txt_MedarbejderNr
             // 
-            this.ArbejderNr.Location = new System.Drawing.Point(130, 400);
-            this.ArbejderNr.Name = "ArbejderNr";
-            this.ArbejderNr.Size = new System.Drawing.Size(100, 22);
-            this.ArbejderNr.TabIndex = 16;
+            this.txt_MedarbejderNr.Location = new System.Drawing.Point(130, 400);
+            this.txt_MedarbejderNr.Name = "txt_MedarbejderNr";
+            this.txt_MedarbejderNr.Size = new System.Drawing.Size(100, 22);
+            this.txt_MedarbejderNr.TabIndex = 16;
             // 
-            // Klientnr
+            // txt_Klientnr
             // 
-            this.Klientnr.Location = new System.Drawing.Point(130, 356);
-            this.Klientnr.Name = "Klientnr";
-            this.Klientnr.Size = new System.Drawing.Size(100, 22);
-            this.Klientnr.TabIndex = 15;
+            this.txt_Klientnr.Location = new System.Drawing.Point(130, 356);
+            this.txt_Klientnr.Name = "txt_Klientnr";
+            this.txt_Klientnr.Size = new System.Drawing.Size(100, 22);
+            this.txt_Klientnr.TabIndex = 15;
             // 
             // label7
             // 
@@ -193,8 +193,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(484, 438);
-            this.Controls.Add(this.ArbejderNr);
-            this.Controls.Add(this.Klientnr);
+            this.Controls.Add(this.txt_MedarbejderNr);
+            this.Controls.Add(this.txt_Klientnr);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimePicker2);
@@ -232,8 +232,8 @@
         private System.Windows.Forms.TextBox txt_time;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.TextBox ArbejderNr;
-        private System.Windows.Forms.TextBox Klientnr;
+        private System.Windows.Forms.TextBox txt_MedarbejderNr;
+        private System.Windows.Forms.TextBox txt_Klientnr;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
     }

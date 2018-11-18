@@ -22,16 +22,16 @@ namespace DataAccess
             }
             return _database;
         }
-        public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat)
+        public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string Klientnr, string MedarbejderNr)
         {
-            Case c = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat);
+            Case c = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, Klientnr, MedarbejderNr);
             using (var conn = new SqlConnection(Properties.Settings.Default.Constring))
             {
                 SqlCommand com = new SqlCommand();
                 com.Connection = conn;
                 conn.Open();
 
-                string sqlString = $"insert into goodboysplus1(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}')";
+                string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, Klientnr, MedarbejderNr)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.Klientnr}', '{MedarbejderNr}')";
                 com.CommandText = sqlString;
                 Console.WriteLine(sqlString);
                 com.ExecuteNonQuery();
@@ -45,7 +45,7 @@ namespace DataAccess
                 com.Connection = conn;
                 conn.Open();
 
-                string sqlString = $"insert into goodboysplus1(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}')";
+                string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, Klientnr, MedarbejderNr)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}', '{c.Klientnr}' ,'{c.MedarbejderNr}')";
                 com.CommandText = sqlString;
                 Console.WriteLine(sqlString);
                 com.ExecuteNonQuery();

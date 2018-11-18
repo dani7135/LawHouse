@@ -10,10 +10,11 @@ namespace BusinessLogic
     public class Controller
     {
 
-        static Database database { get; set; }
-        public Controller()
+        private static Database database = Database.Instance();
+       public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat,string Klientnr, string MedarbejderNr)
         {
-            database = Database.Instance();
+            Case @case = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, Klientnr, MedarbejderNr);
+            database.CreateCase(@case);
         }
 
 

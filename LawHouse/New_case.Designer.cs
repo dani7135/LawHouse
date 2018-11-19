@@ -39,12 +39,12 @@
             this.txt_kørsel = new System.Windows.Forms.TextBox();
             this.txt_titel = new System.Windows.Forms.TextBox();
             this.txt_time = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.Slutdato = new System.Windows.Forms.DateTimePicker();
             this.txt_MedarbejderNr = new System.Windows.Forms.TextBox();
             this.txt_Klientnr = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.StartDato = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_Create
@@ -140,19 +140,12 @@
             this.txt_time.Size = new System.Drawing.Size(100, 22);
             this.txt_time.TabIndex = 10;
             // 
-            // dateTimePicker1
+            // Slutdato
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(130, 158);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 11;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(130, 214);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 12;
+            this.Slutdato.Location = new System.Drawing.Point(130, 214);
+            this.Slutdato.Name = "Slutdato";
+            this.Slutdato.Size = new System.Drawing.Size(200, 22);
+            this.Slutdato.TabIndex = 12;
             // 
             // txt_MedarbejderNr
             // 
@@ -186,6 +179,14 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "Klientnr";
             // 
+            // StartDato
+            // 
+            this.StartDato.Enabled = false;
+            this.StartDato.Location = new System.Drawing.Point(130, 163);
+            this.StartDato.Name = "StartDato";
+            this.StartDato.Size = new System.Drawing.Size(100, 22);
+            this.StartDato.TabIndex = 17;
+            // 
             // New_case
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -193,12 +194,12 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(484, 438);
+            this.Controls.Add(this.StartDato);
             this.Controls.Add(this.txt_MedarbejderNr);
             this.Controls.Add(this.txt_Klientnr);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.Slutdato);
             this.Controls.Add(this.txt_time);
             this.Controls.Add(this.txt_titel);
             this.Controls.Add(this.txt_kørsel);
@@ -230,12 +231,12 @@
         private System.Windows.Forms.TextBox txt_kørsel;
         private System.Windows.Forms.TextBox txt_titel;
         private System.Windows.Forms.TextBox txt_time;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker Slutdato;
         private System.Windows.Forms.TextBox txt_MedarbejderNr;
         private System.Windows.Forms.TextBox txt_Klientnr;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox StartDato;
     }
 }
 

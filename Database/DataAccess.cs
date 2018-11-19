@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace DataAccess
 {
     //Singletone er blevet brugt nedenunder og i kontrolleren
+    //A singleton is a convenient way for accessing the service from anywhere in the application code
     public class Database
     {
         private static Database _database = null;

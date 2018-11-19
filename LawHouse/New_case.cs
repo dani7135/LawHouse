@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +18,14 @@ namespace GUI
         public New_case()
         {
             InitializeComponent();
+            StartDato.Text = DateTime.Today.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture);       
+            Slutdato.Format = DateTimePickerFormat.Custom;
+            Slutdato.MinDate = DateTime.Today;
         }
 
         private void btn_Create_Click(object sender, EventArgs e)
         {            
-            Controller.CreateCase(txt_titel.Text, null, null, txt_time.Text, txt_time.Text, txt_Klientnr.Text, txt_MedarbejderNr.Text);
+            Controller.CreateCase(txt_titel.Text, StartDato.Text, Slutdato.Text, txt_kørsel.Text, txt_time.Text, txt_Klientnr.Text, txt_MedarbejderNr.Text);
             this.Close();
         }
     }

@@ -22,7 +22,7 @@ namespace DataAccess
         {
             this.Arbejdstitel = Arbejdstitel;
             this.StartDato = StartDato;
-            this.StartDato = SlutDato;
+            this.SlutDato = SlutDato;
             this.Kørselstimer = Kørselstimer;
             this.TimeEstimat = TimeEstimat;
             this.Klientnr = Klientnr;

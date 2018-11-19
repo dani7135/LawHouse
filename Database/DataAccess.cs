@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess
+namespace DataAccess// testComment
 {
     //Singletone er blevet brugt nedenunder og i kontrolleren
     //A singleton is a convenient way for accessing the service from anywhere in the application code
     public class Database
     {
+        int testint;
         private static Database _database = null;
         private Database() { }
         public static Database Instance()

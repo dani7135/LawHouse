@@ -20,7 +20,5 @@ namespace GUI
             objectListView1.SetObjects(Controller.HentAlleCases());
 
         }
-
-
     }
 }

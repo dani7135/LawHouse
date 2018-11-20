@@ -9,7 +9,6 @@ namespace BusinessLogic
 
     public class Controller
     {
-
         private static Database database = Database.Instance();
        public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse, string InterneNoter, string Klientnr, string AdvokatId)
         {

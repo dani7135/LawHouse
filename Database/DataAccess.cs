@@ -44,7 +44,7 @@ namespace DataAccess// testComment
         }
         public void CreateCase(Case c)
         {
-            using (var conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))           
             {
                 SqlCommand com = new SqlCommand();
                 com.Connection = conn;
@@ -55,28 +55,13 @@ namespace DataAccess// testComment
                 Console.WriteLine(sqlString);
                 com.ExecuteNonQuery();
             }
-        }
-
-        /*public DataTable GetAllCases()
-        {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
-            {
-                conn.Open();
-
-                using (SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Sag", conn))
-                {
-                    DataTable t = new DataTable();
-                    sda.Fill(t);
-                    return t;
-                }
-
-            }Skal nok slettes
-        }*/ 
+        }     
 
         public List<Case> GetAllCase()
         {
             string sqlString = "select * from Sag " +
-               "join Advokat on Sag.AdvokatID = Advokat.AdvokatId";
+               "join Advokat on Sag.AdvokatID = Advokat.AdvokatId"+
+            " join Klient on Sag.KlientNr = Klient.KlientNr";
 
             List<Case> Alle = new List<Case>();
 

@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 450);
+            this.ClientSize = new System.Drawing.Size(997, 530);
             this.Controls.Add(this.btn_slet);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.objectListView1);

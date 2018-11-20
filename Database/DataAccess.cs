@@ -6,13 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess// testComment
+namespace DataAccess
 {
     //Singletone er blevet brugt nedenunder og i kontrolleren
     //A singleton is a convenient way for accessing the service from anywhere in the application code
     public class Database
     {
-        int testint;
         private static Database _database = null;
         private Database() { }
         public static Database Instance()
@@ -24,7 +23,7 @@ namespace DataAccess// testComment
             }
             return _database;
         }
-        public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, string AdvokatId)
+     /*   public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, string AdvokatId)
         {
             Case c = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId);
             using (var conn = new SqlConnection(Properties.Settings.Default.ConnString))
@@ -42,7 +41,8 @@ namespace DataAccess// testComment
 
             }
         }
-        public void CreateCase(Case c)
+        */
+        public void CreateCase(Case c)//Grunden til at der den her er fordi den tager en case og opretter det ud for properties
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))           
             {

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BusinessLogic;
+
 
 namespace GUI
 {
@@ -15,6 +17,10 @@ namespace GUI
         public Overblik()
         {
             InitializeComponent();
+            objectListView1.SetObjects(Controller.HentAlleCases());
+
         }
+
+
     }
 }

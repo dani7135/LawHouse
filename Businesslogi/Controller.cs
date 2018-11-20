@@ -11,12 +11,18 @@ namespace BusinessLogic
     {
 
         private static Database database = Database.Instance();
-       public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat,string Klientnr, string MedarbejderNr)
+       public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse, string InterneNoter, string Klientnr, string AdvokatId)
         {
-            Case @case = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, Klientnr, MedarbejderNr);
+            Case @case = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, Klientnr, AdvokatId);
             database.CreateCase(@case);
         }
+   
+        public static List<Case> HentAlleCases()
+        {
+            Case @case = new Case();
+            List<Case> HentAlle = database.GetAllCase();
 
-
+            return HentAlle;
+        }     
     }
 }

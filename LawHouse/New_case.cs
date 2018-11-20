@@ -25,8 +25,14 @@ namespace GUI
 
         private void btn_Create_Click(object sender, EventArgs e)
         {            
-            Controller.CreateCase(txt_titel.Text, StartDato.Text, Slutdato.Text, txt_kørsel.Text, txt_time.Text, txt_Klientnr.Text, txt_MedarbejderNr.Text);
+            Controller.CreateCase(txt_titel.Text, StartDato.Text, Slutdato.Text, txt_kørsel.Text, txt_time.Text,  txt_SagsBeskrivelse.Text , txt_InterneNoter.Text, txt_Klientnr.Text, txt_MedarbejderNr.Text);
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Overblik overblik = new Overblik();
+            overblik.Show();
         }
     }
 }

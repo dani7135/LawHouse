@@ -13,20 +13,24 @@ namespace DataAccess
         public string StartDato { get; set; }
         public string SlutDato { get; set; }
         public string Kørselstimer { get; set; }
-        public string TimeEstimat { get; set; }
+        public string TimeEstimat { get; set; }     
+        public string SagsBeskrivelse { get; set; } 
+        public string InterneNoter { get; set; }
         public string Klientnr { get; set; }
-        public string MedarbejderNr { get; set; }
+        public string AdvokatId { get; set; }
 
         public Case() { }
-        public Case(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string Klientnr, string MedarbejderNr)
+        public Case(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string Klientnr, string AdvokatId)
         {
             this.Arbejdstitel = Arbejdstitel;
             this.StartDato = StartDato;
             this.SlutDato = SlutDato;
             this.Kørselstimer = Kørselstimer;
             this.TimeEstimat = TimeEstimat;
+            this.SagsBeskrivelse = SagsBeskrivelse;
+            this.InterneNoter = InterneNoter;
             this.Klientnr = Klientnr;
-            this.MedarbejderNr = MedarbejderNr;
+            this.AdvokatId = AdvokatId;
         }
     }
 }

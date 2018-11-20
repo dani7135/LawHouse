@@ -26,11 +26,11 @@ namespace DataAccess.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=den1.mssql7.gear.host;Initial Catalog=goodboysplus1;Persist Security " +
-            "Info=True;User ID=goodboysplus1;Password=Fm8Bw5a!_Yz5")]
-        public string Constring {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=den1.mssql8.gear.host;Initial Catalog=goodboysplus1v2;Persist Securit" +
+            "y Info=True;User ID=goodboysplus1v2;Password=Kr995B7kts!_")]
+        public string ConnString {
             get {
-                return ((string)(this["Constring"]));
+                return ((string)(this["ConnString"]));
             }
         }
     }

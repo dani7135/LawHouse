@@ -24,9 +24,9 @@ namespace DataAccess// testComment
             }
             return _database;
         }
-        public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string Klientnr, string AdvokatId)
+        public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, string AdvokatId)
         {
-            Case c = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, Klientnr, AdvokatId);
+            Case c = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId);
             using (var conn = new SqlConnection(Properties.Settings.Default.ConnString))
             {
                 using (SqlCommand com = new SqlCommand())
@@ -34,7 +34,7 @@ namespace DataAccess// testComment
                     com.Connection = conn;
                     conn.Open();
 
-                    string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , Klientnr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.Klientnr}', '{c.AdvokatId}')";
+                    string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , Klientnr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
                     com.CommandText = sqlString;
                     Console.WriteLine(sqlString);
                     com.ExecuteNonQuery();
@@ -50,7 +50,7 @@ namespace DataAccess// testComment
                 com.Connection = conn;
                 conn.Open();
 
-                string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , Klientnr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.Klientnr}', '{c.AdvokatId}')";
+                string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
                 com.CommandText = sqlString;
                 Console.WriteLine(sqlString);
                 com.ExecuteNonQuery();
@@ -83,7 +83,7 @@ namespace DataAccess// testComment
                             @case.TimeEstimat = sqld["TimeEstimat"].ToString();
                             @case.SagsBeskrivelse = sqld["SagsBeskrivelse"].ToString();
                             @case.InterneNoter = sqld["InterneNoter"].ToString();
-                            @case.Klientnr = sqld["Klientnr"].ToString();
+                            @case.KlientNr = sqld["Klientnr"].ToString();
                             @case.AdvokatId = sqld["AdvokatId"].ToString();
                             Alle.Add(@case);
                         }

@@ -41,7 +41,7 @@
             this.txt_time = new System.Windows.Forms.TextBox();
             this.Slutdato = new System.Windows.Forms.DateTimePicker();
             this.txt_MedarbejderNr = new System.Windows.Forms.TextBox();
-            this.txt_Klientnr = new System.Windows.Forms.TextBox();
+            this.txt_KlientNr = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.StartDato = new System.Windows.Forms.TextBox();
@@ -161,10 +161,10 @@
             // 
             // txt_Klientnr
             // 
-            this.txt_Klientnr.Location = new System.Drawing.Point(156, 356);
-            this.txt_Klientnr.Name = "txt_Klientnr";
-            this.txt_Klientnr.Size = new System.Drawing.Size(100, 22);
-            this.txt_Klientnr.TabIndex = 15;
+            this.txt_KlientNr.Location = new System.Drawing.Point(156, 356);
+            this.txt_KlientNr.Name = "txt_Klientnr";
+            this.txt_KlientNr.Size = new System.Drawing.Size(100, 22);
+            this.txt_KlientNr.TabIndex = 15;
             // 
             // label7
             // 
@@ -248,7 +248,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.StartDato);
             this.Controls.Add(this.txt_MedarbejderNr);
-            this.Controls.Add(this.txt_Klientnr);
+            this.Controls.Add(this.txt_KlientNr);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Slutdato);
@@ -285,7 +285,7 @@
         private System.Windows.Forms.TextBox txt_time;
         private System.Windows.Forms.DateTimePicker Slutdato;
         private System.Windows.Forms.TextBox txt_MedarbejderNr;
-        private System.Windows.Forms.TextBox txt_Klientnr;
+        private System.Windows.Forms.TextBox txt_KlientNr;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox StartDato;

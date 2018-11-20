@@ -75,7 +75,8 @@ namespace DataAccess// testComment
 
         public List<Case> GetAllCase()
         {
-            string sqlString = "select * from Sag ";
+            string sqlString = "select * from Sag " +
+               "join Advokat on Sag.AdvokatID = Advokat.AdvokatId";
 
             List<Case> Alle = new List<Case>();
 

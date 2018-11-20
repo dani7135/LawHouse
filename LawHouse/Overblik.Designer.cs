@@ -80,8 +80,8 @@
             this.objectListView1.Name = "objectListView1";
             this.objectListView1.ShowGroups = false;
             this.objectListView1.ShowImagesOnSubItems = true;
-            this.objectListView1.Size = new System.Drawing.Size(678, 348);
-            this.objectListView1.TabIndex = 0;
+            this.objectListView1.Size = new System.Drawing.Size(912, 348);
+            this.objectListView1.TabIndex = 1;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.UseFiltering = true;
             this.objectListView1.View = System.Windows.Forms.View.Details;
@@ -133,8 +133,9 @@
             // 
             // MedarbejderNr
             // 
-            this.MedarbejderNr.AspectName = "MedarbejderNr";
+            this.MedarbejderNr.AspectName = "AdvokatId";
             this.MedarbejderNr.Text = "MedarbejderNr";
+            this.MedarbejderNr.Width = 107;
             // 
             // btn_Update
             // 
@@ -158,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(997, 450);
             this.Controls.Add(this.btn_slet);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.objectListView1);

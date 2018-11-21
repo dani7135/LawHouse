@@ -23,44 +23,46 @@ namespace DataAccess
             }
             return _database;
         }
-     /*   public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, string AdvokatId)
+        /*   public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, string AdvokatId)
+           {
+               Case c = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId);
+               using (var conn = new SqlConnection(Properties.Settings.Default.ConnString))
+               {
+                   using (SqlCommand com = new SqlCommand())
+                   {
+                       com.Connection = conn;
+                       conn.Open();
+
+                       string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , Klientnr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
+                       com.CommandText = sqlString;
+                       Console.WriteLine(sqlString);
+                       com.ExecuteNonQuery();
+                   }
+
+               }
+           }
+           */
+        public void CreateCase(Case c)//Grunden til at der den her er fordi den tager en case og opretter det ud for properties
         {
-            Case c = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId);
-            using (var conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
             {
                 using (SqlCommand com = new SqlCommand())
                 {
                     com.Connection = conn;
                     conn.Open();
 
-                    string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , Klientnr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
+                    string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
                     com.CommandText = sqlString;
-                    Console.WriteLine(sqlString);
-                    com.ExecuteNonQuery();
+                     com.ExecuteNonQuery();
                 }
-
+            
             }
         }
-        */
-        public void CreateCase(Case c)//Grunden til at der den her er fordi den tager en case og opretter det ud for properties
-        {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))           
-            {
-                SqlCommand com = new SqlCommand();
-                com.Connection = conn;
-                conn.Open();
-
-                string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
-                com.CommandText = sqlString;
-                Console.WriteLine(sqlString);
-                com.ExecuteNonQuery();
-            }
-        }     
 
         public List<Case> GetAllCase()
         {
             string sqlString = "select * from Sag " +
-               "join Advokat on Sag.AdvokatID = Advokat.AdvokatId"+
+               "join Advokat on Sag.AdvokatID = Advokat.AdvokatId" +
             " join Klient on Sag.KlientNr = Klient.KlientNr";
 
             List<Case> Alle = new List<Case>();
@@ -75,7 +77,7 @@ namespace DataAccess
                         while (sqld.Read())
                         {
                             Case @case = new Case();
-                            @case.SagsNr = sqld["Sagsnr"].ToString();
+                            @case.SagsNr = sqld["SagsNr"].ToString();
                             @case.Arbejdstitel = sqld["Arbejdstitel"].ToString();
                             @case.StartDato = sqld["StartDato"].ToString();
                             @case.SlutDato = sqld["SlutDato"].ToString();
@@ -89,6 +91,26 @@ namespace DataAccess
                         }
                     return Alle;
                 }
+            }
+
+        }
+        public void Update(Case @case)
+        {
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            {
+                using (SqlCommand com = new SqlCommand())
+                {
+                    com.Connection = conn;
+                    conn.Open();
+
+                    string sqlString =
+                    $"update Sag set Arbejdstitel = '{@case.Arbejdstitel}', StartDato = '{@case.StartDato}', SlutDato = '{@case.SlutDato}', Kørselstimer = '{@case.Kørselstimer}', TimeEstimat = '{@case.TimeEstimat}', SagsBeskrivelse = '{@case.SagsBeskrivelse}', InterneNoter = '{@case.InterneNoter}', KlientNr = '{@case.KlientNr}', AdvokatId = '{@case.AdvokatId}' " +
+                    $"where SagsNr = {@case.SagsNr}";
+                    com.CommandText = sqlString;
+                    com.ExecuteNonQuery();
+                }
+                 
+
             }
         }
     }

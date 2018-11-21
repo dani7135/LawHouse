@@ -20,5 +20,17 @@ namespace GUI
             objectListView1.SetObjects(Controller.HentAlleCases());
 
         }
+
+        private void btn_Update_Click(object sender, EventArgs e)
+        {
+            if (objectListView1.SelectedObjects.Count == 1)
+            {
+                if (objectListView1.SelectedObject != null)
+                {
+                    Controller.Opdater(objectListView1.SelectedObject);
+                        MessageBox.Show("Opdateret");
+                }
+            }
+        }
     }
 }

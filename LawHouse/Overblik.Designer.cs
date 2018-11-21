@@ -142,6 +142,7 @@
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Opdater sag";
             this.btn_Update.UseVisualStyleBackColor = true;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
             // 
             // btn_slet
             // 

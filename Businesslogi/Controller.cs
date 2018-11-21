@@ -22,6 +22,13 @@ namespace BusinessLogic
             List<Case> HentAlle = database.GetAllCase();
 
             return HentAlle;
-        }     
+        }   
+        public static void Opdater(object opdateretObjekt)
+        {
+
+            Case @case = (Case)opdateretObjekt;
+            database.Update(@case);
+
+        }
     }
 }

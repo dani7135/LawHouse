@@ -30,5 +30,9 @@ namespace BusinessLogic
             database.Update(@case);
 
         }
+        public static void List()
+        {
+            ListItem I = new ListItem()
+        }
     }
 }

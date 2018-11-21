@@ -18,7 +18,7 @@ namespace GUI
         {
             InitializeComponent();
             objectListView1.SetObjects(Controller.HentAlleCases());
-
+            ((Control)pictureBox1).AllowDrop = true;
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
@@ -32,5 +32,30 @@ namespace GUI
                 }
             }
         }
+
+        private void pictureBox1_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Move;
+        }
+
+        private void pictureBox1_DragDrop(object sender, DragEventArgs e)
+        {
+            int x = this.PointToClient(new Point(e.X, e.Y)).X;
+
+            int y = this.PointToClient(new Point(e.X, e.Y)).Y;
+
+            if (x >= pictureBox1.Location.X && x <= pictureBox1.Location.X + pictureBox1.Width && y >= pictureBox1.Location.Y && y <= pictureBox1.Location.Y + pictureBox1.Height)
+
+            {
+
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                pictureBox1.Image = Image.FromFile(files[0]);
+
+            }
+            
+        }
+        
+      
     }
 }

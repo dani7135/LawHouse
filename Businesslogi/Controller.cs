@@ -36,6 +36,17 @@ namespace BusinessLogic
             List<ListItems> GetItems = database.GetList();
             return GetItems;
         }
+
+        public static void CreateAdvokat(string advokatNavn)
+        {
+            Advokat ad = new Advokat(advokatNavn);
+            database.CreateAdvokat(ad);
+        }
+
+        public static void AddSpecialToAdvokat(string specialName, int advokatId)
+        {
+            database.AddSpecialToAdvokat(specialName, advokatId);
+        }
          
          
     }

@@ -46,6 +46,7 @@
             this.dataSetDrop = new GUI.DataSetDrop();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.YdelseTypeNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDrop)).BeginInit();
@@ -63,6 +64,7 @@
             this.objectListView1.AllColumns.Add(this.InterneNoter);
             this.objectListView1.AllColumns.Add(this.KlientNr);
             this.objectListView1.AllColumns.Add(this.MedarbejderNr);
+            this.objectListView1.AllColumns.Add(this.YdelseTypeNr);
             this.objectListView1.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
             this.objectListView1.CellEditUseWholeCell = false;
             this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -75,7 +77,8 @@
             this.SagsBeskrivelse,
             this.InterneNoter,
             this.KlientNr,
-            this.MedarbejderNr});
+            this.MedarbejderNr,
+            this.YdelseTypeNr});
             this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.FullRowSelect = true;
             this.objectListView1.GridLines = true;
@@ -188,6 +191,11 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 6;
             // 
+            // YdelseTypeNr
+            // 
+            this.YdelseTypeNr.AspectName = "YdelseTypeNr";
+            this.YdelseTypeNr.Text = "YdelseTypeNr";
+            // 
             // Overblik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,5 +234,6 @@
         private DataSetDrop dataSetDrop;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private BrightIdeasSoftware.OLVColumn YdelseTypeNr;
     }
 }

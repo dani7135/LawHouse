@@ -18,9 +18,10 @@ namespace DataAccess
         public string InterneNoter { get; set; }
         public string KlientNr { get; set; }
         public string AdvokatId { get; set; }
+        public string YdelsesTypeNr { get; set; }
 
         public Case() { }
-        public Case(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, string AdvokatId)
+        public Case(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, string AdvokatId, string YdelsesTypeNr)
         {
             this.Arbejdstitel = Arbejdstitel;
             this.StartDato = StartDato;
@@ -31,6 +32,7 @@ namespace DataAccess
             this.InterneNoter = InterneNoter;
             this.KlientNr = KlientNr;
             this.AdvokatId = AdvokatId;
+            this.YdelsesTypeNr = YdelsesTypeNr;
         }
     }
 }

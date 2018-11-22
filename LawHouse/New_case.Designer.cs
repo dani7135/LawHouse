@@ -50,12 +50,13 @@
             this.txt_InterneNoter = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_YdelseTypeNr = new System.Windows.Forms.TextBox();
+            this.YdelseTypeNr = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Create
             // 
-            this.btn_Create.Location = new System.Drawing.Point(326, 377);
+            this.btn_Create.Location = new System.Drawing.Point(326, 353);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(128, 45);
             this.btn_Create.TabIndex = 0;
@@ -235,12 +236,21 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "InterneNoter";
             // 
-            // textBox1
+            // txt_YdelseTypeNr
             // 
-            this.textBox1.Location = new System.Drawing.Point(156, 387);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 23;
+            this.txt_YdelseTypeNr.Location = new System.Drawing.Point(156, 376);
+            this.txt_YdelseTypeNr.Name = "txt_YdelseTypeNr";
+            this.txt_YdelseTypeNr.Size = new System.Drawing.Size(100, 22);
+            this.txt_YdelseTypeNr.TabIndex = 23;
+            // 
+            // YdelseTypeNr
+            // 
+            this.YdelseTypeNr.AutoSize = true;
+            this.YdelseTypeNr.Location = new System.Drawing.Point(34, 381);
+            this.YdelseTypeNr.Name = "YdelseTypeNr";
+            this.YdelseTypeNr.Size = new System.Drawing.Size(98, 17);
+            this.YdelseTypeNr.TabIndex = 24;
+            this.YdelseTypeNr.Text = "YdelseTypeNr";
             // 
             // New_case
             // 
@@ -249,7 +259,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(484, 438);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.YdelseTypeNr);
+            this.Controls.Add(this.txt_YdelseTypeNr);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_InterneNoter);
@@ -303,7 +314,8 @@
         private System.Windows.Forms.TextBox txt_InterneNoter;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_YdelseTypeNr;
+        private System.Windows.Forms.Label YdelseTypeNr;
     }
 }
 

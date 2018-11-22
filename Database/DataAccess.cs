@@ -51,7 +51,7 @@ namespace DataAccess
                     com.Connection = conn;
                     conn.Open();
 
-                    string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
+                    string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId, YdelsesTypeNr)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}' , '{c.YdelsesTypeNr}')";
                     com.CommandText = sqlString;
                     com.ExecuteNonQuery();
                 }
@@ -87,6 +87,7 @@ namespace DataAccess
                             @case.InterneNoter = sqld["InterneNoter"].ToString();
                             @case.KlientNr = sqld["Klientnr"].ToString();
                             @case.AdvokatId = sqld["AdvokatId"].ToString();
+                            @case.YdelsesTypeNr = sqld["YdelsesTypeNr"].ToString();
                             Alle.Add(@case);
                         }
                     return Alle;
@@ -104,7 +105,7 @@ namespace DataAccess
                     conn.Open();
 
                     string sqlString =
-                    $"update Sag set Arbejdstitel = '{@case.Arbejdstitel}', StartDato = '{@case.StartDato}', SlutDato = '{@case.SlutDato}', Kørselstimer = '{@case.Kørselstimer}', TimeEstimat = '{@case.TimeEstimat}', SagsBeskrivelse = '{@case.SagsBeskrivelse}', InterneNoter = '{@case.InterneNoter}', KlientNr = '{@case.KlientNr}', AdvokatId = '{@case.AdvokatId}' " +
+                    $"update Sag set Arbejdstitel = '{@case.Arbejdstitel}', StartDato = '{@case.StartDato}', SlutDato = '{@case.SlutDato}', Kørselstimer = '{@case.Kørselstimer}', TimeEstimat = '{@case.TimeEstimat}', SagsBeskrivelse = '{@case.SagsBeskrivelse}', InterneNoter = '{@case.InterneNoter}', KlientNr = '{@case.KlientNr}', AdvokatId = '{@case.AdvokatId}', YdelsesTypeNr = '{@case.YdelsesTypeNr}' " +
                     $"where SagsNr = {@case.SagsNr}";
                     com.CommandText = sqlString;
                     com.ExecuteNonQuery();

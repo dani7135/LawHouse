@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
             this.SagsNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.Arbejdstitel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -41,10 +42,13 @@
             this.MedarbejderNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_slet = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataSetDropBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetDrop = new GUI.DataSetDrop();
+            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetDrop)).BeginInit();
             this.SuspendLayout();
             // 
             // objectListView1
@@ -156,26 +160,33 @@
             this.btn_slet.Text = "Slet sag";
             this.btn_slet.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // dataSetDropBindingSource
             // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.Items_menu;
-            this.pictureBox1.Location = new System.Drawing.Point(716, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(54, 50);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
-            this.pictureBox1.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.dataSetDropBindingSource.DataSource = this.dataSetDrop;
+            this.dataSetDropBindingSource.Position = 0;
+            // 
+            // dataSetDrop
+            // 
+            this.dataSetDrop.DataSetName = "DataSetDrop";
+            this.dataSetDrop.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::GUI.Properties.Resources.Items_menu;
+            this.button1.Location = new System.Drawing.Point(726, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(51, 49);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Sag"});
-            this.comboBox1.Location = new System.Drawing.Point(716, 77);
+            this.comboBox1.Location = new System.Drawing.Point(793, 43);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 4;
+            this.comboBox1.TabIndex = 6;
             // 
             // Overblik
             // 
@@ -183,14 +194,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 530);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_slet);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.objectListView1);
             this.Name = "Overblik";
             this.Text = "Overblik";
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetDrop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,7 +222,9 @@
         private BrightIdeasSoftware.OLVColumn MedarbejderNr;
         private System.Windows.Forms.Button btn_Update;
         private System.Windows.Forms.Button btn_slet;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.BindingSource dataSetDropBindingSource;
+        private DataSetDrop dataSetDrop;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
     }
 }

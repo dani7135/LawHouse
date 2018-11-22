@@ -48,6 +48,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="ListItems.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

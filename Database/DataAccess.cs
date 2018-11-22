@@ -10,15 +10,15 @@ namespace DataAccess
 {
     //Singletone er blevet brugt nedenunder og i kontrolleren
     //A singleton is a convenient way for accessing the service from anywhere in the application code
-    public class Database
+    public class DatabaseCase
     {
-        private static Database _database = null;
-        private Database() { }
-        public static Database Instance()
+        private static DatabaseCase _database = null;
+        private DatabaseCase() { }
+        public static DatabaseCase Instance()
         {
             if (_database == null)
             {
-                _database = new Database();
+                _database = new DatabaseCase();
 
             }
             return _database;
@@ -53,9 +53,9 @@ namespace DataAccess
 
                     string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
                     com.CommandText = sqlString;
-                     com.ExecuteNonQuery();
+                    com.ExecuteNonQuery();
                 }
-            
+
             }
         }
 
@@ -109,11 +109,37 @@ namespace DataAccess
                     com.CommandText = sqlString;
                     com.ExecuteNonQuery();
                 }
-                 
+
 
             }
         }
+        public List<ListItems> GetList()
+        {
+            string sqlString = "select * from Liste";
+            List<ListItems> All = new List<ListItems>();
+
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            using (SqlCommand com = new SqlCommand(sqlString, conn))
+            {
+                conn.Open();
+                using (SqlDataReader sqld = com.ExecuteReader())
+                {
+                    if (sqld.HasRows)
+                        while (sqld.Read())
+                        {
+                            ListItems @list = new ListItems();
+                            @list.ListID = sqld["ListID"].ToString();
+                            @list.What_type = sqld["Hvad_type"].ToString();
+                            All.Add(@list);
+                        }
+                    return All;
+                }
+            }
+        }
+
+
     }
+
 
 }
 

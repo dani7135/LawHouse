@@ -9,7 +9,7 @@ namespace BusinessLogic
 
     public class Controller
     {
-        private static Database database = Database.Instance();
+        private static DatabaseCase database = DatabaseCase.Instance();
        public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse, string InterneNoter, string KlientNr, string AdvokatId)
         {
             Case @case = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId);
@@ -30,9 +30,13 @@ namespace BusinessLogic
             database.Update(@case);
 
         }
-        public static void List()
+        public static List<ListItems> GetAllItems()
         {
-            ListItem I = new ListItem()
+            ListItems list = new ListItems();
+            List<ListItems> GetItems = database.GetList();
+            return GetItems;
         }
+         
+         
     }
 }

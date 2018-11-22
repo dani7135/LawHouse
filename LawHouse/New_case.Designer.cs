@@ -50,6 +50,7 @@
             this.txt_InterneNoter = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_Create
@@ -110,7 +111,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(34, 262);
+            this.label6.Location = new System.Drawing.Point(34, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 17);
             this.label6.TabIndex = 6;
@@ -140,7 +141,7 @@
             // 
             // txt_time
             // 
-            this.txt_time.Location = new System.Drawing.Point(156, 257);
+            this.txt_time.Location = new System.Drawing.Point(156, 236);
             this.txt_time.Name = "txt_time";
             this.txt_time.Size = new System.Drawing.Size(100, 22);
             this.txt_time.TabIndex = 10;
@@ -154,22 +155,22 @@
             // 
             // txt_MedarbejderNr
             // 
-            this.txt_MedarbejderNr.Location = new System.Drawing.Point(156, 400);
+            this.txt_MedarbejderNr.Location = new System.Drawing.Point(156, 348);
             this.txt_MedarbejderNr.Name = "txt_MedarbejderNr";
             this.txt_MedarbejderNr.Size = new System.Drawing.Size(100, 22);
             this.txt_MedarbejderNr.TabIndex = 16;
             // 
-            // txt_Klientnr
+            // txt_KlientNr
             // 
-            this.txt_KlientNr.Location = new System.Drawing.Point(156, 356);
-            this.txt_KlientNr.Name = "txt_Klientnr";
+            this.txt_KlientNr.Location = new System.Drawing.Point(156, 320);
+            this.txt_KlientNr.Name = "txt_KlientNr";
             this.txt_KlientNr.Size = new System.Drawing.Size(100, 22);
             this.txt_KlientNr.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 405);
+            this.label7.Location = new System.Drawing.Point(34, 353);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 17);
             this.label7.TabIndex = 14;
@@ -178,7 +179,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(34, 361);
+            this.label8.Location = new System.Drawing.Point(34, 325);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 17);
             this.label8.TabIndex = 13;
@@ -204,14 +205,14 @@
             // 
             // txt_SagsBeskrivelse
             // 
-            this.txt_SagsBeskrivelse.Location = new System.Drawing.Point(156, 300);
+            this.txt_SagsBeskrivelse.Location = new System.Drawing.Point(156, 264);
             this.txt_SagsBeskrivelse.Name = "txt_SagsBeskrivelse";
             this.txt_SagsBeskrivelse.Size = new System.Drawing.Size(100, 22);
             this.txt_SagsBeskrivelse.TabIndex = 19;
             // 
             // txt_InterneNoter
             // 
-            this.txt_InterneNoter.Location = new System.Drawing.Point(156, 328);
+            this.txt_InterneNoter.Location = new System.Drawing.Point(156, 292);
             this.txt_InterneNoter.Name = "txt_InterneNoter";
             this.txt_InterneNoter.Size = new System.Drawing.Size(100, 22);
             this.txt_InterneNoter.TabIndex = 20;
@@ -219,7 +220,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(34, 303);
+            this.label9.Location = new System.Drawing.Point(34, 269);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(112, 17);
             this.label9.TabIndex = 21;
@@ -228,11 +229,18 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(34, 333);
+            this.label10.Location = new System.Drawing.Point(34, 297);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 17);
             this.label10.TabIndex = 22;
             this.label10.Text = "InterneNoter";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(156, 387);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 23;
             // 
             // New_case
             // 
@@ -241,6 +249,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(484, 438);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_InterneNoter);
@@ -294,6 +303,7 @@
         private System.Windows.Forms.TextBox txt_InterneNoter;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

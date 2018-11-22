@@ -51,6 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_GoToFormCreateAdvokat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Create
@@ -242,6 +243,16 @@
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 23;
             // 
+            // btn_GoToFormCreateAdvokat
+            // 
+            this.btn_GoToFormCreateAdvokat.Location = new System.Drawing.Point(2, 1);
+            this.btn_GoToFormCreateAdvokat.Name = "btn_GoToFormCreateAdvokat";
+            this.btn_GoToFormCreateAdvokat.Size = new System.Drawing.Size(160, 23);
+            this.btn_GoToFormCreateAdvokat.TabIndex = 24;
+            this.btn_GoToFormCreateAdvokat.Text = "Gå til: Opret advokat";
+            this.btn_GoToFormCreateAdvokat.UseVisualStyleBackColor = true;
+            this.btn_GoToFormCreateAdvokat.Click += new System.EventHandler(this.btn_GoToFormCreateAdvokat_Click);
+            // 
             // New_case
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -249,6 +260,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(484, 438);
+            this.Controls.Add(this.btn_GoToFormCreateAdvokat);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -304,6 +316,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_GoToFormCreateAdvokat;
     }
 }
 

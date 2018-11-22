@@ -34,5 +34,11 @@ namespace GUI
             Overblik overblik = new Overblik();
             overblik.Show();
         }
+
+        private void btn_GoToFormCreateAdvokat_Click(object sender, EventArgs e)
+        {
+            CreateAdvokatTester advokatTester = new CreateAdvokatTester();
+            advokatTester.Show();
+        }
     }
 }

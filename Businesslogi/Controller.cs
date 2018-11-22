@@ -42,12 +42,10 @@ namespace BusinessLogic
             Advokat ad = new Advokat(advokatNavn);
             database.CreateAdvokat(ad);
         }
-
         public static void AddSpecialToAdvokat(string specialName, int advokatId)
         {
             database.AddSpecialToAdvokat(specialName, advokatId);
         }
-         
-         
+
     }
 }

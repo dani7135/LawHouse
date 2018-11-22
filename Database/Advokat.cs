@@ -16,13 +16,4 @@
             Efteruddannelse = efteruddannelse;
         }
     }
-
-    //public class AdvokatSpecial
-    //{
-    //    public string SpecialName { get; set; }
-    //    public AdvokatSpecial()
-    //    {
-            
-    //    }
-    //}
 }

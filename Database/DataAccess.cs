@@ -156,6 +156,10 @@ namespace DataAccess
         }
 
         public void AddSpecialToAdvokat(string efteruddannelse, int advokatId)
+        /* Når en advokat skal have tilføjet et speciale/efteruddannelse, skal man i vores database bare indtaste et "navn" på specialet + "advokat id'et", som skal have denne efteruddannelse.
+         * Havde forstillet mig, at man i vores ViewListe skal kunne vælge "vis advokater" og derinde så tilføje efteruddannelse ud fra en "valgt" advokats id.
+         - Dennie 
+         */
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
             {

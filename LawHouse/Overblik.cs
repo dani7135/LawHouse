@@ -19,11 +19,12 @@ namespace GUI
         public Overblik()
         {
             InitializeComponent();
-            objectListView1.SetObjects(Controller.HentAlleCases());
+            objectListView1.SetObjects(Controller.GetAllCases());
      
 
             comboBox1.DataSource = Controller.GetAllItems();
             comboBox1.DisplayMember = "What_type";
+            
             
         }
 
@@ -33,7 +34,7 @@ namespace GUI
             {
                 if (objectListView1.SelectedObject != null)
                 {
-                    Controller.Opdater(objectListView1.SelectedObject);
+                    Controller.Update(objectListView1.SelectedObject);
                     MessageBox.Show("Opdateret");
                 }
             }

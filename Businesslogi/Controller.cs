@@ -16,17 +16,17 @@ namespace BusinessLogic
             database.CreateCase(@case);
         }
    
-        public static List<Case> HentAlleCases()
+        public static List<Case> GetAllCases()
         {
             Case @case = new Case();
-            List<Case> HentAlle = database.GetAllCase();
+            List<Case> GetAll = database.GetAllCase();
 
-            return HentAlle;
+            return GetAll;
         }   
-        public static void Opdater(object opdateretObjekt)
+        public static void Update(object UpdateObject)
         {
 
-            Case @case = (Case)opdateretObjekt;
+            Case @case = (Case)UpdateObject;
             database.Update(@case);
 
         }

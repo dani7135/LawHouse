@@ -42,6 +42,8 @@ namespace DataAccess
                }
            }
            */
+       
+
         public void CreateCase(Case c)//Grunden til at der den her er fordi den tager en case og opretter det ud for properties
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
@@ -114,10 +116,10 @@ namespace DataAccess
 
             }
         }
-        public List<ListItems> GetList()
+        public List<ListItem> GetList()
         {
-            string sqlString = "select * from Liste";
-            List<ListItems> All = new List<ListItems>();
+            string sqlString = "select * from List";
+            List<ListItem> All = new List<ListItem>();
 
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
             using (SqlCommand com = new SqlCommand(sqlString, conn))
@@ -128,10 +130,36 @@ namespace DataAccess
                     if (sqld.HasRows)
                         while (sqld.Read())
                         {
-                            ListItems @list = new ListItems();
+                            ListItem @list = new ListItem();
                             @list.ListID = sqld["ListID"].ToString();
-                            @list.What_type = sqld["Hvad_type"].ToString();
+                            @list.What_type = sqld["What_type"].ToString();
                             All.Add(@list);
+                        }
+                    return All;
+                }
+            }
+        }
+
+        public List<Klient> KlientList()
+        {
+            string sqlString = "select * from Klient";
+            List<Klient> All = new List<Klient>();
+
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            using (SqlCommand com = new SqlCommand(sqlString, conn))
+            {
+                conn.Open();
+                using (SqlDataReader sqld = com.ExecuteReader())
+                {
+                    if (sqld.HasRows)
+                        while (sqld.Read())
+                        {
+                            Klient @klient = new Klient();
+                            @klient.KlientNr = sqld["KlientNr"].ToString();
+                            @klient.Navn = sqld["Navn"].ToString();
+                            @klient.Adresse = sqld["Adresse"].ToString();
+                            @klient.TelefonNr = sqld["TelefonNr"].ToString();
+                            All.Add(@klient);
                         }
                     return All;
                 }

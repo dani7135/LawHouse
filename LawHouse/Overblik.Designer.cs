@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.objectListView1 = new BrightIdeasSoftware.ObjectListView();
+            this.olvColumn1 = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.SagsNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.Arbejdstitel = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.StartDato = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -40,13 +41,16 @@
             this.InterneNoter = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.KlientNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.MedarbejderNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.YdelsesTypeNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.Navn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.Adresse = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.TelefonNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.btn_Update = new System.Windows.Forms.Button();
             this.btn_slet = new System.Windows.Forms.Button();
             this.dataSetDropBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetDrop = new GUI.DataSetDrop();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.YdelseTypeNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDrop)).BeginInit();
@@ -54,6 +58,7 @@
             // 
             // objectListView1
             // 
+            this.objectListView1.AllColumns.Add(this.olvColumn1);
             this.objectListView1.AllColumns.Add(this.SagsNr);
             this.objectListView1.AllColumns.Add(this.Arbejdstitel);
             this.objectListView1.AllColumns.Add(this.StartDato);
@@ -64,10 +69,14 @@
             this.objectListView1.AllColumns.Add(this.InterneNoter);
             this.objectListView1.AllColumns.Add(this.KlientNr);
             this.objectListView1.AllColumns.Add(this.MedarbejderNr);
-            this.objectListView1.AllColumns.Add(this.YdelseTypeNr);
+            this.objectListView1.AllColumns.Add(this.YdelsesTypeNr);
+            this.objectListView1.AllColumns.Add(this.Navn);
+            this.objectListView1.AllColumns.Add(this.Adresse);
+            this.objectListView1.AllColumns.Add(this.TelefonNr);
             this.objectListView1.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
             this.objectListView1.CellEditUseWholeCell = false;
             this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.olvColumn1,
             this.SagsNr,
             this.Arbejdstitel,
             this.StartDato,
@@ -78,7 +87,10 @@
             this.InterneNoter,
             this.KlientNr,
             this.MedarbejderNr,
-            this.YdelseTypeNr});
+            this.YdelsesTypeNr,
+            this.Navn,
+            this.Adresse,
+            this.TelefonNr});
             this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.FullRowSelect = true;
             this.objectListView1.GridLines = true;
@@ -92,6 +104,10 @@
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.UseFiltering = true;
             this.objectListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // olvColumn1
+            // 
+            this.olvColumn1.Width = 0;
             // 
             // SagsNr
             // 
@@ -144,6 +160,26 @@
             this.MedarbejderNr.Text = "MedarbejderNr";
             this.MedarbejderNr.Width = 107;
             // 
+            // YdelsesTypeNr
+            // 
+            this.YdelsesTypeNr.AspectName = "YdelsesTypeNr";
+            this.YdelsesTypeNr.Text = "YdelsesTypeNr";
+            // 
+            // Navn
+            // 
+            this.Navn.AspectName = "Navn";
+            this.Navn.Text = "Klient Navn";
+            // 
+            // Adresse
+            // 
+            this.Adresse.AspectName = "Adresse";
+            this.Adresse.Text = "Adresse";
+            // 
+            // TelefonNr
+            // 
+            this.TelefonNr.AspectName = "TelefonNr";
+            this.TelefonNr.Text = "TelefonNr";
+            // 
             // btn_Update
             // 
             this.btn_Update.Location = new System.Drawing.Point(44, 12);
@@ -190,11 +226,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 6;
-            // 
-            // YdelseTypeNr
-            // 
-            this.YdelseTypeNr.AspectName = "YdelseTypeNr";
-            this.YdelseTypeNr.Text = "YdelseTypeNr";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Overblik
             // 
@@ -234,6 +266,10 @@
         private DataSetDrop dataSetDrop;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private BrightIdeasSoftware.OLVColumn YdelseTypeNr;
+        private BrightIdeasSoftware.OLVColumn YdelsesTypeNr;
+        private BrightIdeasSoftware.OLVColumn olvColumn1;
+        private BrightIdeasSoftware.OLVColumn Navn;
+        private BrightIdeasSoftware.OLVColumn Adresse;
+        private BrightIdeasSoftware.OLVColumn TelefonNr;
     }
 }

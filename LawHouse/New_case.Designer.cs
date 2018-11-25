@@ -51,7 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txt_YdelseTypeNr = new System.Windows.Forms.TextBox();
-            this.YdelseTypeNr = new System.Windows.Forms.Label();
+            this.YdelsesTypeNr = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Create
@@ -245,12 +245,12 @@
             // 
             // YdelseTypeNr
             // 
-            this.YdelseTypeNr.AutoSize = true;
-            this.YdelseTypeNr.Location = new System.Drawing.Point(34, 381);
-            this.YdelseTypeNr.Name = "YdelseTypeNr";
-            this.YdelseTypeNr.Size = new System.Drawing.Size(98, 17);
-            this.YdelseTypeNr.TabIndex = 24;
-            this.YdelseTypeNr.Text = "YdelseTypeNr";
+            this.YdelsesTypeNr.AutoSize = true;
+            this.YdelsesTypeNr.Location = new System.Drawing.Point(34, 381);
+            this.YdelsesTypeNr.Name = "YdelseTypeNr";
+            this.YdelsesTypeNr.Size = new System.Drawing.Size(98, 17);
+            this.YdelsesTypeNr.TabIndex = 24;
+            this.YdelsesTypeNr.Text = "YdelseTypeNr";
             // 
             // New_case
             // 
@@ -259,7 +259,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(484, 438);
-            this.Controls.Add(this.YdelseTypeNr);
+            this.Controls.Add(this.YdelsesTypeNr);
             this.Controls.Add(this.txt_YdelseTypeNr);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -315,7 +315,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txt_YdelseTypeNr;
-        private System.Windows.Forms.Label YdelseTypeNr;
+        private System.Windows.Forms.Label YdelsesTypeNr;
     }
 }
 

@@ -39,5 +39,10 @@ namespace GUI
         {
 
         }
+
+        private void CreateAdvokatTester_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

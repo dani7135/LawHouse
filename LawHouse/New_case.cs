@@ -48,7 +48,8 @@ namespace GUI
 
         private void Btn_CreateKlient_Click(object sender, EventArgs e)
         {
-
+            OpretKLient KlientTester = new OpretKLient();
+            KlientTester.Show();
         }
     }
 }

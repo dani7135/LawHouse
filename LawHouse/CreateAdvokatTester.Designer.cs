@@ -42,7 +42,7 @@
             // btn_CreateAdvokat
             // 
             this.btn_CreateAdvokat.Location = new System.Drawing.Point(9, 17);
-            this.btn_CreateAdvokat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_CreateAdvokat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_CreateAdvokat.Name = "btn_CreateAdvokat";
             this.btn_CreateAdvokat.Size = new System.Drawing.Size(104, 58);
             this.btn_CreateAdvokat.TabIndex = 0;
@@ -53,7 +53,7 @@
             // btn_AddSpecialToAdvokat
             // 
             this.btn_AddSpecialToAdvokat.Location = new System.Drawing.Point(14, 158);
-            this.btn_AddSpecialToAdvokat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_AddSpecialToAdvokat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AddSpecialToAdvokat.Name = "btn_AddSpecialToAdvokat";
             this.btn_AddSpecialToAdvokat.Size = new System.Drawing.Size(100, 62);
             this.btn_AddSpecialToAdvokat.TabIndex = 1;
@@ -64,7 +64,7 @@
             // txt_AdvokatNavn
             // 
             this.txt_AdvokatNavn.Location = new System.Drawing.Point(208, 37);
-            this.txt_AdvokatNavn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_AdvokatNavn.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AdvokatNavn.Name = "txt_AdvokatNavn";
             this.txt_AdvokatNavn.Size = new System.Drawing.Size(76, 20);
             this.txt_AdvokatNavn.TabIndex = 2;
@@ -102,7 +102,7 @@
             // txt_AdvokatId
             // 
             this.txt_AdvokatId.Location = new System.Drawing.Point(212, 158);
-            this.txt_AdvokatId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_AdvokatId.Margin = new System.Windows.Forms.Padding(2);
             this.txt_AdvokatId.Name = "txt_AdvokatId";
             this.txt_AdvokatId.Size = new System.Drawing.Size(76, 20);
             this.txt_AdvokatId.TabIndex = 6;
@@ -110,7 +110,7 @@
             // txt_SpecialeNavn
             // 
             this.txt_SpecialeNavn.Location = new System.Drawing.Point(212, 191);
-            this.txt_SpecialeNavn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_SpecialeNavn.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SpecialeNavn.Name = "txt_SpecialeNavn";
             this.txt_SpecialeNavn.Size = new System.Drawing.Size(76, 20);
             this.txt_SpecialeNavn.TabIndex = 7;
@@ -139,9 +139,10 @@
             this.Controls.Add(this.txt_AdvokatNavn);
             this.Controls.Add(this.btn_AddSpecialToAdvokat);
             this.Controls.Add(this.btn_CreateAdvokat);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateAdvokatTester";
             this.Text = "CreateAdvokatTester";
+            this.Load += new System.EventHandler(this.CreateAdvokatTester_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

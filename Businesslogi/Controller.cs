@@ -54,6 +54,11 @@ namespace BusinessLogic
             database.AddSpecialToAdvokat(specialName, advokatId);
         }
      
-
+        public static List<Advokat>  GetAllAdvokat()
+        {
+            Advokat advokat = new Advokat();
+            List<Advokat> ad = database.GetAllAdvokat();
+            return ad;
+        }
     }
 }

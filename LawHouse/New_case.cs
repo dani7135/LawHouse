@@ -21,6 +21,8 @@ namespace GUI
             StartDato.Text = DateTime.Today.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture);       
             Slutdato.Format = DateTimePickerFormat.Custom;
             Slutdato.MinDate = DateTime.Today;
+
+            txt_MedarbejderNr.DataSource = Controller.GetAllAdvokat();
         }
 
         private void btn_Create_Click(object sender, EventArgs e)

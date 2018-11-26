@@ -24,7 +24,7 @@ namespace GUI
 
             comboBox1.DataSource = Controller.GetAllItems();
             comboBox1.DisplayMember = "What_type";
-            comboBox1.DataSource = Controller.
+        
         }
 
         private void btn_Update_Click(object sender, EventArgs e)

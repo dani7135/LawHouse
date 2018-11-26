@@ -87,6 +87,7 @@ namespace DataAccess
                             @case.InterneNoter = sqld["InterneNoter"].ToString();
                             @case.KlientNr = sqld["Klientnr"].ToString();
                             @case.AdvokatId = sqld["AdvokatId"].ToString();
+                            @case.YdelsesTypeNr = sqld["YdelsesTypeNr"].ToString();
                             Alle.Add(@case);
                         }
                     return Alle;
@@ -200,6 +201,31 @@ namespace DataAccess
                     return All;
                 }
             }
+        }
+
+        public List<Advokat> GetAllAdvokat()
+        {
+            string sqlString = "select * Advokat";
+            List<Advokat> All = new List<Advokat>();
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            using (SqlCommand com = new SqlCommand(sqlString, conn))
+            {
+                conn.Open();
+                using (SqlDataReader sqld = com.ExecuteReader())
+                {
+                    if (sqld.HasRows)
+                    {
+                        while (sqld.Read())
+                        {
+                            Advokat @advokat = new Advokat();
+                            @advokat.Navn = sqld["Navn"].ToString();
+                            All.Add(@advokat);
+                        }
+                        return All;
+                    }
+                }
+            }
+           
         }
     }
 }

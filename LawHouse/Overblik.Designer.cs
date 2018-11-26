@@ -180,7 +180,7 @@
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(44, 42);
+            this.btn_Update.Location = new System.Drawing.Point(44, -9);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(124, 25);
             this.btn_Update.TabIndex = 1;

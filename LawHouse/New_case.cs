@@ -22,6 +22,8 @@ namespace GUI
             Slutdato.Format = DateTimePickerFormat.Custom;
             Slutdato.MinDate = DateTime.Today;
 
+            txt_YdelseTypeNr.DataSource = Controller.GetAllYdelseType();
+            txt_YdelseTypeNr.DisplayMember = "YdelsesNavn";
             txt_MedarbejderNr.DataSource = Controller.GetAllAdvokat();
             txt_MedarbejderNr.DisplayMember= "Navn";
         }
@@ -53,6 +55,14 @@ namespace GUI
         {
             OpretKLient KlientTester = new OpretKLient();
             KlientTester.Show();
+        }
+
+        private void txt_YdelseTypeNr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           /* switch (switch_on)
+            {
+                default:
+            }*/
         }
     }
 }

@@ -65,7 +65,7 @@ namespace DataAccess
              * Havde forstillet mig, at man i vores ViewListe skal kunne vælge "vis advokater" og derinde så tilføje efteruddannelse ud fra en "valgt" advokats id.
              - Dennie 
              */
-        public void AddSpecialToAdvokat(string efteruddannelse, int advokatId) 
+        public void AddSpecialToAdvokat(string efteruddannelse, int advokatId)
         {
             string sqlString = $"INSERT INTO Efteruddannelse(Navn, AdvokatId) VALUES ('{efteruddannelse}', {advokatId})";
             RunSqlCommand(sqlString);
@@ -108,7 +108,7 @@ namespace DataAccess
             }
 
         }
-        
+
         public List<ListItems> GetList()
         {
             string sqlString = "select * from List";
@@ -132,6 +132,53 @@ namespace DataAccess
                 }
             }
         }
+
+        public List<YdelseList> YdelsesLists()
+        {
+            string sqlString = "select * from Tjenesteydelse";
+            List<YdelseList> All = new List<YdelseList>();
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            using (SqlCommand com = new SqlCommand(sqlString, conn))
+            {
+                conn.Open();
+                using (SqlDataReader sqld = com.ExecuteReader())
+                {
+                    if (sqld.HasRows)
+                        while (sqld.Read())
+                        {
+                            YdelseList ydelse = new YdelseList();
+                            ydelse.AdvokatId = sqld["AdvokatId"].ToString();
+                            ydelse.YdelsesTypeNr = sqld["YdelsesTypeNr"].ToString();
+                            All.Add(ydelse);
+                        }
+                    return All;
+                }
+            }
+        }
+        public List<YdelseType> YdelseType()
+        {
+            string sqlString = "select * from YdelseType";
+            List<YdelseType> All = new List<YdelseType>();
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            using (SqlCommand com = new SqlCommand(sqlString, conn))
+            {
+                conn.Open();
+                using (SqlDataReader sqld = com.ExecuteReader())
+                {
+                    if (sqld.HasRows)
+                        while (sqld.Read())
+                        {
+                            YdelseType ydelse = new YdelseType();
+                            ydelse.YdelsesTypeNr = sqld["YdelsesTypeNr"].ToString();
+                            ydelse.YdelsesNavn = sqld["YdelsesNavn"].ToString();
+                            All.Add(ydelse);
+                        }
+                    return All;
+                }
+            }
+        }
+
+
         public List<Klient> KlientList()
         {
             string sqlString = "select * from Klient";
@@ -168,21 +215,18 @@ namespace DataAccess
                 conn.Open();
                 using (SqlDataReader sqld = com.ExecuteReader())
                 {
-                    if (sqld.HasRows)
-                    {
+                    if (sqld.HasRows)                   
                         while (sqld.Read())
                         {
                             Advokat @advokat = new Advokat();
                             @advokat.AdvokatId = sqld["AdvokatId"].ToString();
                             @advokat.Navn = sqld["Navn"].ToString();
                             All.Add(@advokat);
-                        }
-                       
-                    }
+                        }                    
                     return All;
                 }
             }
-           
+
         }
 
 

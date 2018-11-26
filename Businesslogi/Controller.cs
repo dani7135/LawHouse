@@ -41,6 +41,16 @@ namespace BusinessLogic
             List<ListItems> GetItems = currentDatabaseInstance.GetList();
             return GetItems;
         }
+        public static List<YdelseList> GetAllYdelser()
+        {
+            List<YdelseList> ydelseLists = currentDatabaseInstance.YdelsesLists();
+            return ydelseLists;
+        }
+        public static List<YdelseType> GetAllYdelseType()
+        {
+            List<YdelseType> ydT = currentDatabaseInstance.YdelseType();
+            return ydT;
+        }
 
         public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer,
             string TimeEstimat, string SagsBeskrivelse, string InterneNoter, string KlientNr, string AdvokatId, string YdelsesTypeNr)

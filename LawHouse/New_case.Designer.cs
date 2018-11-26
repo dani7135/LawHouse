@@ -110,7 +110,7 @@
             this.txt_nr.Location = new System.Drawing.Point(372, 67);
             this.txt_nr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_nr.Name = "txt_nr";
-            this.txt_nr.Size = new System.Drawing.Size(121, 22);
+            this.txt_nr.Size = new System.Drawing.Size(170, 22);
             this.txt_nr.TabIndex = 7;
             // 
             // txt_kørsel
@@ -118,7 +118,7 @@
             this.txt_kørsel.Location = new System.Drawing.Point(372, 222);
             this.txt_kørsel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_kørsel.Name = "txt_kørsel";
-            this.txt_kørsel.Size = new System.Drawing.Size(121, 22);
+            this.txt_kørsel.Size = new System.Drawing.Size(170, 22);
             this.txt_kørsel.TabIndex = 8;
             // 
             // txt_titel
@@ -126,7 +126,7 @@
             this.txt_titel.Location = new System.Drawing.Point(372, 104);
             this.txt_titel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_titel.Name = "txt_titel";
-            this.txt_titel.Size = new System.Drawing.Size(121, 22);
+            this.txt_titel.Size = new System.Drawing.Size(170, 22);
             this.txt_titel.TabIndex = 9;
             // 
             // txt_time
@@ -134,7 +134,7 @@
             this.txt_time.Location = new System.Drawing.Point(372, 262);
             this.txt_time.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_time.Name = "txt_time";
-            this.txt_time.Size = new System.Drawing.Size(121, 22);
+            this.txt_time.Size = new System.Drawing.Size(170, 22);
             this.txt_time.TabIndex = 10;
             // 
             // Slutdato
@@ -150,13 +150,13 @@
             this.txt_KlientNr.Location = new System.Drawing.Point(372, 474);
             this.txt_KlientNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_KlientNr.Name = "txt_KlientNr";
-            this.txt_KlientNr.Size = new System.Drawing.Size(121, 22);
+            this.txt_KlientNr.Size = new System.Drawing.Size(170, 22);
             this.txt_KlientNr.TabIndex = 15;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(251, 436);
+            this.label7.Location = new System.Drawing.Point(251, 414);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 17);
             this.label7.TabIndex = 14;
@@ -177,7 +177,7 @@
             this.StartDato.Location = new System.Drawing.Point(372, 143);
             this.StartDato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StartDato.Name = "StartDato";
-            this.StartDato.Size = new System.Drawing.Size(121, 22);
+            this.StartDato.Size = new System.Drawing.Size(170, 22);
             this.StartDato.TabIndex = 17;
             // 
             // button1
@@ -196,7 +196,7 @@
             this.txt_SagsBeskrivelse.Location = new System.Drawing.Point(372, 303);
             this.txt_SagsBeskrivelse.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txt_SagsBeskrivelse.Name = "txt_SagsBeskrivelse";
-            this.txt_SagsBeskrivelse.Size = new System.Drawing.Size(121, 22);
+            this.txt_SagsBeskrivelse.Size = new System.Drawing.Size(170, 22);
             this.txt_SagsBeskrivelse.TabIndex = 19;
             // 
             // txt_InterneNoter
@@ -204,7 +204,7 @@
             this.txt_InterneNoter.Location = new System.Drawing.Point(372, 361);
             this.txt_InterneNoter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_InterneNoter.Name = "txt_InterneNoter";
-            this.txt_InterneNoter.Size = new System.Drawing.Size(121, 22);
+            this.txt_InterneNoter.Size = new System.Drawing.Size(170, 22);
             this.txt_InterneNoter.TabIndex = 20;
             // 
             // label9
@@ -270,10 +270,10 @@
             // 
             // txt_MedarbejderNr
             // 
-            this.txt_MedarbejderNr.Location = new System.Drawing.Point(372, 433);
+            this.txt_MedarbejderNr.Location = new System.Drawing.Point(372, 411);
             this.txt_MedarbejderNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MedarbejderNr.Name = "txt_MedarbejderNr";
-            this.txt_MedarbejderNr.Size = new System.Drawing.Size(132, 24);
+            this.txt_MedarbejderNr.Size = new System.Drawing.Size(170, 24);
             this.txt_MedarbejderNr.TabIndex = 26;
             // 
             // Sags
@@ -299,8 +299,9 @@
             this.txt_YdelseTypeNr.FormattingEnabled = true;
             this.txt_YdelseTypeNr.Location = new System.Drawing.Point(372, 20);
             this.txt_YdelseTypeNr.Name = "txt_YdelseTypeNr";
-            this.txt_YdelseTypeNr.Size = new System.Drawing.Size(121, 24);
+            this.txt_YdelseTypeNr.Size = new System.Drawing.Size(170, 24);
             this.txt_YdelseTypeNr.TabIndex = 30;
+            this.txt_YdelseTypeNr.SelectedIndexChanged += new System.EventHandler(this.txt_YdelseTypeNr_SelectedIndexChanged);
             // 
             // New_case
             // 

@@ -23,25 +23,6 @@ namespace DataAccess
             }
             return _database;
         }
-        /*   public void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, string AdvokatId)
-           {
-               Case c = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId);
-               using (var conn = new SqlConnection(Properties.Settings.Default.ConnString))
-               {
-                   using (SqlCommand com = new SqlCommand())
-                   {
-                       com.Connection = conn;
-                       conn.Open();
-
-                       string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , Klientnr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
-                       com.CommandText = sqlString;
-                       Console.WriteLine(sqlString);
-                       com.ExecuteNonQuery();
-                   }
-
-               }
-           }
-           */
         private void RunSqlCommand(string commandToRun) //Made by Daniella, refactored by Julius
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))

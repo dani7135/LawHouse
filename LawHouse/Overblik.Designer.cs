@@ -49,7 +49,6 @@
             this.btn_slet = new System.Windows.Forms.Button();
             this.dataSetDropBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetDrop = new GUI.DataSetDrop();
-            this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).BeginInit();
@@ -209,16 +208,6 @@
             this.dataSetDrop.DataSetName = "DataSetDrop";
             this.dataSetDrop.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::GUI.Properties.Resources.Items_menu;
-            this.button1.Location = new System.Drawing.Point(726, 18);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 49);
-            this.button1.TabIndex = 5;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -234,7 +223,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 530);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_slet);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.objectListView1);
@@ -264,7 +252,6 @@
         private System.Windows.Forms.Button btn_slet;
         private System.Windows.Forms.BindingSource dataSetDropBindingSource;
         private DataSetDrop dataSetDrop;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
         private BrightIdeasSoftware.OLVColumn YdelsesTypeNr;
         private BrightIdeasSoftware.OLVColumn olvColumn1;

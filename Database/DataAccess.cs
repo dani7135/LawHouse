@@ -97,7 +97,7 @@ namespace DataAccess
             }
 
         }
-        public void Update(Case @case)
+        public void UpdateCase(Case @case)
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
             {

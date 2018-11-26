@@ -23,9 +23,7 @@ namespace GUI
      
 
             comboBox1.DataSource = Controller.GetAllItems();
-            comboBox1.DisplayMember = "What_type";
-            
-            
+            comboBox1.DisplayMember = "What_type";                     
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
@@ -39,20 +37,6 @@ namespace GUI
                 }
             }
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (button1 != null)
-            {
-                Controller.GetAllItems();
-            }
-            else
-            {
-                MessageBox.Show("Sorry bro");
-            }
-            
-        }
-
 
         //Koden under er ikke noget der har med nogle funktionelle krav at gøre, 
         //det er lavt så man kan skifte visningen af kolonner, alt efter om det er sag, klient osv.

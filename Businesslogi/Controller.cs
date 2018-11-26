@@ -28,7 +28,7 @@ namespace BusinessLogic
         {
 
             Case @case = (Case)UpdateObject;
-            database.Update(@case);
+            database.UpdateCase(@case);
 
         }
         public static List<ListItem> GetAllItems()

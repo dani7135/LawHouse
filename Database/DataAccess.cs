@@ -205,7 +205,7 @@ namespace DataAccess
 
         public List<Advokat> GetAllAdvokat()
         {
-            string sqlString = "select * Advokat";
+            string sqlString = "select * from Advokat";
             List<Advokat> All = new List<Advokat>();
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
             using (SqlCommand com = new SqlCommand(sqlString, conn))
@@ -221,8 +221,9 @@ namespace DataAccess
                             @advokat.Navn = sqld["Navn"].ToString();
                             All.Add(@advokat);
                         }
-                        return All;
+                       
                     }
+                    return All;
                 }
             }
            

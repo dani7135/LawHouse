@@ -49,6 +49,8 @@
             this.dataSetDropBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetDrop = new GUI.DataSetDrop();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Advokat_navn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.AdvokatId = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDrop)).BeginInit();
@@ -71,6 +73,8 @@
             this.objectListView1.AllColumns.Add(this.Navn);
             this.objectListView1.AllColumns.Add(this.Adresse);
             this.objectListView1.AllColumns.Add(this.TelefonNr);
+            this.objectListView1.AllColumns.Add(this.AdvokatId);
+            this.objectListView1.AllColumns.Add(this.Advokat_navn);
             this.objectListView1.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
             this.objectListView1.CellEditUseWholeCell = false;
             this.objectListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -88,7 +92,9 @@
             this.YdelsesTypeNr,
             this.Navn,
             this.Adresse,
-            this.TelefonNr});
+            this.TelefonNr,
+            this.AdvokatId,
+            this.Advokat_navn});
             this.objectListView1.Cursor = System.Windows.Forms.Cursors.Default;
             this.objectListView1.FullRowSelect = true;
             this.objectListView1.GridLines = true;
@@ -207,6 +213,16 @@
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // Advokat_navn
+            // 
+            this.Advokat_navn.AspectName = "Navn";
+            this.Advokat_navn.Text = "Advokat Navn";
+            // 
+            // AdvokatId
+            // 
+            this.AdvokatId.AspectName = "AdvokatId";
+            this.AdvokatId.Text = "AdvokatId";
+            // 
             // Overblik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -246,5 +262,7 @@
         private BrightIdeasSoftware.OLVColumn Navn;
         private BrightIdeasSoftware.OLVColumn Adresse;
         private BrightIdeasSoftware.OLVColumn TelefonNr;
+        private BrightIdeasSoftware.OLVColumn AdvokatId;
+        private BrightIdeasSoftware.OLVColumn Advokat_navn;
     }
 }

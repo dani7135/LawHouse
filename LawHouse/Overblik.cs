@@ -77,6 +77,15 @@ namespace GUI
                     MedarbejderNr.IsVisible = true;
                     YdelsesTypeNr.IsVisible = true;
                     break;
+                case "Advokat":
+                    objectListView1.SetObjects(Controller.GetAllAdvokat());
+                    foreach (var item in objectListView1.AllColumns)
+                    {
+                        item.IsVisible = false;
+                    }
+                    AdvokatId.IsVisible = true;
+                    Advokat_navn.IsVisible = true;
+                    break;
             }
                 objectListView1.RebuildColumns();
         }

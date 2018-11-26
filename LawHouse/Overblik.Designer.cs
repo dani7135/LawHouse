@@ -45,12 +45,12 @@
             this.Navn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.Adresse = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.TelefonNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.AdvokatId = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.Advokat_navn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.btn_Update = new System.Windows.Forms.Button();
             this.dataSetDropBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetDrop = new GUI.DataSetDrop();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.Advokat_navn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
-            this.AdvokatId = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.Btn_Help = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).BeginInit();
@@ -100,12 +100,12 @@
             this.objectListView1.FullRowSelect = true;
             this.objectListView1.GridLines = true;
             this.objectListView1.HasCollapsibleGroups = false;
-            this.objectListView1.Location = new System.Drawing.Point(33, 63);
-            this.objectListView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.objectListView1.Location = new System.Drawing.Point(44, 78);
+            this.objectListView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.objectListView1.Name = "objectListView1";
             this.objectListView1.ShowGroups = false;
             this.objectListView1.ShowImagesOnSubItems = true;
-            this.objectListView1.Size = new System.Drawing.Size(915, 348);
+            this.objectListView1.Size = new System.Drawing.Size(1219, 427);
             this.objectListView1.TabIndex = 1;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.UseFiltering = true;
@@ -186,26 +186,26 @@
             this.TelefonNr.AspectName = "TelefonNr";
             this.TelefonNr.Text = "TelefonNr";
             // 
+            // AdvokatId
+            // 
+            this.AdvokatId.AspectName = "AdvokatId";
+            this.AdvokatId.Text = "AdvokatId";
+            // 
+            // Advokat_navn
+            // 
+            this.Advokat_navn.AspectName = "Navn";
+            this.Advokat_navn.Text = "Advokat Navn";
+            // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(33, 10);
-            this.btn_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Update.Location = new System.Drawing.Point(44, 12);
+            this.btn_Update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(93, 20);
+            this.btn_Update.Size = new System.Drawing.Size(124, 25);
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Opdater sag";
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
-            // 
-            // btn_slet
-            // 
-            this.btn_slet.Location = new System.Drawing.Point(33, 39);
-            this.btn_slet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btn_slet.Name = "btn_slet";
-            this.btn_slet.Size = new System.Drawing.Size(93, 19);
-            this.btn_slet.TabIndex = 2;
-            this.btn_slet.Text = "Slet sag";
-            this.btn_slet.UseVisualStyleBackColor = true;
             // 
             // dataSetDropBindingSource
             // 
@@ -220,25 +220,19 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(793, 43);
+            this.comboBox1.Location = new System.Drawing.Point(692, 48);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(160, 24);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Btn_Help
-            // Advokat_navn
             // 
-            this.Advokat_navn.AspectName = "Navn";
-            this.Advokat_navn.Text = "Advokat Navn";
-            // 
-            // AdvokatId
-            // 
-            this.AdvokatId.AspectName = "AdvokatId";
-            this.AdvokatId.Text = "AdvokatId";
-            this.Btn_Help.Location = new System.Drawing.Point(145, 39);
+            this.Btn_Help.Location = new System.Drawing.Point(193, 48);
+            this.Btn_Help.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Btn_Help.Name = "Btn_Help";
-            this.Btn_Help.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Help.Size = new System.Drawing.Size(100, 28);
             this.Btn_Help.TabIndex = 7;
             this.Btn_Help.Text = "?";
             this.Btn_Help.UseVisualStyleBackColor = true;
@@ -246,14 +240,14 @@
             // 
             // Overblik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 431);
+            this.ClientSize = new System.Drawing.Size(1252, 530);
             this.Controls.Add(this.Btn_Help);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.objectListView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Overblik";
             this.Text = "Overblik";
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();

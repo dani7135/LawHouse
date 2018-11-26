@@ -67,6 +67,29 @@ namespace DataAccess
             string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
             RunSqlCommand(sqlString);
         }
+        public void Update(Case @case)
+        {
+            string sqlString =
+                $"update Sag set Arbejdstitel = '{@case.Arbejdstitel}', StartDato = '{@case.StartDato}', SlutDato = '{@case.SlutDato}', Kørselstimer = '{@case.Kørselstimer}', TimeEstimat = '{@case.TimeEstimat}', SagsBeskrivelse = '{@case.SagsBeskrivelse}', InterneNoter = '{@case.InterneNoter}', KlientNr = '{@case.KlientNr}', AdvokatId = '{@case.AdvokatId}' " +
+                $"where SagsNr = {@case.SagsNr}";
+            RunSqlCommand(sqlString);
+        }
+
+        public void CreateAdvokat(Advokat ad)
+        {
+            string sqlString = $"INSERT INTO Advokat(Navn) VALUES ('{ad.AdvokatId} ', {ad.Navn}')";
+            RunSqlCommand(sqlString);
+        }
+        /* Når en advokat skal have tilføjet et speciale/efteruddannelse, skal man i vores database bare indtaste et "navn" på specialet + "advokat id'et", som skal have denne efteruddannelse.
+             * Havde forstillet mig, at man i vores ViewListe skal kunne vælge "vis advokater" og derinde så tilføje efteruddannelse ud fra en "valgt" advokats id.
+             - Dennie 
+             */
+        public void AddSpecialToAdvokat(string efteruddannelse, int advokatId) 
+        {
+            string sqlString = $"INSERT INTO Efteruddannelse(Navn, AdvokatId) VALUES ('{efteruddannelse}', {advokatId})";
+            RunSqlCommand(sqlString);
+        }
+
 
         public List<Case> GetAllCase()
         {
@@ -104,25 +127,7 @@ namespace DataAccess
             }
 
         }
-        public void Update(Case @case)
-        {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
-            {
-                using (SqlCommand com = new SqlCommand())
-                {
-                    com.Connection = conn;
-                    conn.Open();
-
-                    string sqlString =
-                    $"update Sag set Arbejdstitel = '{@case.Arbejdstitel}', StartDato = '{@case.StartDato}', SlutDato = '{@case.SlutDato}', Kørselstimer = '{@case.Kørselstimer}', TimeEstimat = '{@case.TimeEstimat}', SagsBeskrivelse = '{@case.SagsBeskrivelse}', InterneNoter = '{@case.InterneNoter}', KlientNr = '{@case.KlientNr}', AdvokatId = '{@case.AdvokatId}' " +
-                    $"where SagsNr = {@case.SagsNr}";
-                    com.CommandText = sqlString;
-                    com.ExecuteNonQuery();
-                }
-
-
-            }
-        }
+        
         public List<ListItems> GetList()
         {
             string sqlString = "select * from List";
@@ -146,23 +151,6 @@ namespace DataAccess
                 }
             }
         }
-        
-        public void CreateAdvokat(Advokat ad)
-        {
-            string sqlString = $"INSERT INTO Advokat(Navn) VALUES ('{ad.AdvokatId} ', {ad.Navn}')";
-            RunSqlCommand(sqlString);
-        }
-
-        public void AddSpecialToAdvokat(string efteruddannelse, int advokatId)
-        /* Når en advokat skal have tilføjet et speciale/efteruddannelse, skal man i vores database bare indtaste et "navn" på specialet + "advokat id'et", som skal have denne efteruddannelse.
-         * Havde forstillet mig, at man i vores ViewListe skal kunne vælge "vis advokater" og derinde så tilføje efteruddannelse ud fra en "valgt" advokats id.
-         - Dennie 
-         */
-        {
-            string sqlString = $"INSERT INTO Efteruddannelse(Navn, AdvokatId) VALUES ('{efteruddannelse}', {advokatId})";
-            RunSqlCommand(sqlString);
-        }
-
         public List<Klient> KlientList()
         {
             string sqlString = "select * from Klient";

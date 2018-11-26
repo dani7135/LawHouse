@@ -53,12 +53,13 @@
             this.txt_YdelseTypeNr = new System.Windows.Forms.TextBox();
             this.btn_GoToFormCreateAdvokat = new System.Windows.Forms.Button();
             this.Btn_Help = new System.Windows.Forms.Button();
+            this.Btn_CreateKlient = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Create
             // 
             this.btn_Create.Location = new System.Drawing.Point(244, 306);
-            this.btn_Create.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Create.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Create.Name = "btn_Create";
             this.btn_Create.Size = new System.Drawing.Size(96, 37);
             this.btn_Create.TabIndex = 0;
@@ -130,7 +131,7 @@
             // 
             this.txt_nr.Enabled = false;
             this.txt_nr.Location = new System.Drawing.Point(117, 43);
-            this.txt_nr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_nr.Margin = new System.Windows.Forms.Padding(2);
             this.txt_nr.Name = "txt_nr";
             this.txt_nr.Size = new System.Drawing.Size(76, 20);
             this.txt_nr.TabIndex = 7;
@@ -138,7 +139,7 @@
             // txt_kørsel
             // 
             this.txt_kørsel.Location = new System.Drawing.Point(117, 169);
-            this.txt_kørsel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_kørsel.Margin = new System.Windows.Forms.Padding(2);
             this.txt_kørsel.Name = "txt_kørsel";
             this.txt_kørsel.Size = new System.Drawing.Size(76, 20);
             this.txt_kørsel.TabIndex = 8;
@@ -146,7 +147,7 @@
             // txt_titel
             // 
             this.txt_titel.Location = new System.Drawing.Point(117, 73);
-            this.txt_titel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_titel.Margin = new System.Windows.Forms.Padding(2);
             this.txt_titel.Name = "txt_titel";
             this.txt_titel.Size = new System.Drawing.Size(76, 20);
             this.txt_titel.TabIndex = 9;
@@ -154,7 +155,7 @@
             // txt_time
             // 
             this.txt_time.Location = new System.Drawing.Point(117, 192);
-            this.txt_time.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_time.Margin = new System.Windows.Forms.Padding(2);
             this.txt_time.Name = "txt_time";
             this.txt_time.Size = new System.Drawing.Size(76, 20);
             this.txt_time.TabIndex = 10;
@@ -162,7 +163,7 @@
             // Slutdato
             // 
             this.Slutdato.Location = new System.Drawing.Point(117, 137);
-            this.Slutdato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Slutdato.Margin = new System.Windows.Forms.Padding(2);
             this.Slutdato.Name = "Slutdato";
             this.Slutdato.Size = new System.Drawing.Size(151, 20);
             this.Slutdato.TabIndex = 12;
@@ -170,7 +171,7 @@
             // txt_MedarbejderNr
             // 
             this.txt_MedarbejderNr.Location = new System.Drawing.Point(117, 283);
-            this.txt_MedarbejderNr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_MedarbejderNr.Margin = new System.Windows.Forms.Padding(2);
             this.txt_MedarbejderNr.Name = "txt_MedarbejderNr";
             this.txt_MedarbejderNr.Size = new System.Drawing.Size(76, 20);
             this.txt_MedarbejderNr.TabIndex = 16;
@@ -178,7 +179,7 @@
             // txt_KlientNr
             // 
             this.txt_KlientNr.Location = new System.Drawing.Point(117, 260);
-            this.txt_KlientNr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_KlientNr.Margin = new System.Windows.Forms.Padding(2);
             this.txt_KlientNr.Name = "txt_KlientNr";
             this.txt_KlientNr.Size = new System.Drawing.Size(76, 20);
             this.txt_KlientNr.TabIndex = 15;
@@ -207,7 +208,7 @@
             // 
             this.StartDato.Enabled = false;
             this.StartDato.Location = new System.Drawing.Point(117, 105);
-            this.StartDato.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.StartDato.Margin = new System.Windows.Forms.Padding(2);
             this.StartDato.Name = "StartDato";
             this.StartDato.Size = new System.Drawing.Size(76, 20);
             this.StartDato.TabIndex = 17;
@@ -215,7 +216,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(244, 24);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 37);
             this.button1.TabIndex = 18;
@@ -226,7 +227,7 @@
             // txt_SagsBeskrivelse
             // 
             this.txt_SagsBeskrivelse.Location = new System.Drawing.Point(117, 214);
-            this.txt_SagsBeskrivelse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_SagsBeskrivelse.Margin = new System.Windows.Forms.Padding(2);
             this.txt_SagsBeskrivelse.Name = "txt_SagsBeskrivelse";
             this.txt_SagsBeskrivelse.Size = new System.Drawing.Size(76, 20);
             this.txt_SagsBeskrivelse.TabIndex = 19;
@@ -234,7 +235,7 @@
             // txt_InterneNoter
             // 
             this.txt_InterneNoter.Location = new System.Drawing.Point(117, 237);
-            this.txt_InterneNoter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_InterneNoter.Margin = new System.Windows.Forms.Padding(2);
             this.txt_InterneNoter.Name = "txt_InterneNoter";
             this.txt_InterneNoter.Size = new System.Drawing.Size(76, 20);
             this.txt_InterneNoter.TabIndex = 20;
@@ -263,7 +264,7 @@
             // 
             this.txt_YdelseTypeNr.HideSelection = false;
             this.txt_YdelseTypeNr.Location = new System.Drawing.Point(117, 314);
-            this.txt_YdelseTypeNr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_YdelseTypeNr.Margin = new System.Windows.Forms.Padding(2);
             this.txt_YdelseTypeNr.Name = "txt_YdelseTypeNr";
             this.txt_YdelseTypeNr.Size = new System.Drawing.Size(76, 20);
             this.txt_YdelseTypeNr.TabIndex = 23;
@@ -271,7 +272,7 @@
             // btn_GoToFormCreateAdvokat
             // 
             this.btn_GoToFormCreateAdvokat.Location = new System.Drawing.Point(2, 1);
-            this.btn_GoToFormCreateAdvokat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_GoToFormCreateAdvokat.Margin = new System.Windows.Forms.Padding(2);
             this.btn_GoToFormCreateAdvokat.Name = "btn_GoToFormCreateAdvokat";
             this.btn_GoToFormCreateAdvokat.Size = new System.Drawing.Size(121, 24);
             this.btn_GoToFormCreateAdvokat.TabIndex = 24;
@@ -281,13 +282,23 @@
             // 
             // Btn_Help
             // 
-            this.Btn_Help.Location = new System.Drawing.Point(147, 1);
+            this.Btn_Help.Location = new System.Drawing.Point(244, 67);
             this.Btn_Help.Name = "Btn_Help";
             this.Btn_Help.Size = new System.Drawing.Size(75, 23);
             this.Btn_Help.TabIndex = 25;
             this.Btn_Help.Text = "?";
             this.Btn_Help.UseVisualStyleBackColor = true;
             this.Btn_Help.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Btn_CreateKlient
+            // 
+            this.Btn_CreateKlient.Location = new System.Drawing.Point(128, 2);
+            this.Btn_CreateKlient.Name = "Btn_CreateKlient";
+            this.Btn_CreateKlient.Size = new System.Drawing.Size(111, 23);
+            this.Btn_CreateKlient.TabIndex = 26;
+            this.Btn_CreateKlient.Text = "Gå Til Opret Klient";
+            this.Btn_CreateKlient.UseVisualStyleBackColor = true;
+            this.Btn_CreateKlient.Click += new System.EventHandler(this.Btn_CreateKlient_Click);
             // 
             // New_case
             // 
@@ -296,6 +307,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(363, 356);
+            this.Controls.Add(this.Btn_CreateKlient);
             this.Controls.Add(this.Btn_Help);
             this.Controls.Add(this.btn_GoToFormCreateAdvokat);
             this.Controls.Add(this.txt_YdelseTypeNr);
@@ -321,7 +333,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Create);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "New_case";
             this.Text = "Ny sag";
             this.ResumeLayout(false);
@@ -356,6 +368,7 @@
         private System.Windows.Forms.TextBox txt_YdelseTypeNr;
         private System.Windows.Forms.Button btn_GoToFormCreateAdvokat;
         private System.Windows.Forms.Button Btn_Help;
+        private System.Windows.Forms.Button Btn_CreateKlient;
     }
 }
 

@@ -45,5 +45,10 @@ namespace GUI
         {
 
         }
+
+        private void Btn_CreateKlient_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

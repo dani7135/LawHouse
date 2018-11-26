@@ -52,6 +52,11 @@ namespace BusinessLogic
             List<Klient> GetClient = database.KlientList();
             return GetClient;
         }
+        public static void CreateKlient()
+        {
+            Klient KL = new Klient();
+            database.CreateKlient(KL);
+        }
 
     }
 }

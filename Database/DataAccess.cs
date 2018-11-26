@@ -136,7 +136,7 @@ namespace DataAccess
                 }
             }
         }
-
+        
         public void CreateAdvokat(Advokat ad)
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
@@ -198,6 +198,22 @@ namespace DataAccess
                             All.Add(@klient);
                         }
                     return All;
+                }
+            }
+        }
+        public void CreateKlient(Klient KL)
+        {
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            {
+                using (SqlCommand com = new SqlCommand())
+                {
+                    com.Connection = conn;
+                    conn.Open();
+
+                    string sqlString = $"INSERT INTO KLient(Navn, Adresse, TelefonNr) VALUES ('{KL.Navn}', '{KL.Adresse}', '{KL.TelefonNr}')";
+
+                    com.CommandText = sqlString;
+                    com.ExecuteNonQuery();
                 }
             }
         }

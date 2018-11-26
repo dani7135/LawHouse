@@ -4,17 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
+
 namespace BusinessLogic
 {
 
     public class Controller
     {
         private static DatabaseCase database = DatabaseCase.Instance();
-       public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse, string InterneNoter, string KlientNr, string AdvokatId, string YdelsesTypeNr)
+        public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer,
+            string TimeEstimat, string SagsBeskrivelse, string InterneNoter, string KlientNr, string AdvokatId, string YdelsesTypeNr)
         {
             Case @case = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId, YdelsesTypeNr);
             database.CreateCase(@case);
-        }
+       }
    
         public static List<Case> GetAllCases()
         {

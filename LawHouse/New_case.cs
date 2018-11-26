@@ -23,6 +23,7 @@ namespace GUI
             Slutdato.MinDate = DateTime.Today;
 
             txt_MedarbejderNr.DataSource = Controller.GetAllAdvokat();
+            txt_MedarbejderNr.DisplayMember= "Navn";
         }
 
         private void btn_Create_Click(object sender, EventArgs e)

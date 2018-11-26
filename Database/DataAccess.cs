@@ -115,7 +115,7 @@ namespace DataAccess
         }
         public List<ListItems> GetList()
         {
-            string sqlString = "select * from Liste";
+            string sqlString = "select * from List";
             List<ListItems> All = new List<ListItems>();
 
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))

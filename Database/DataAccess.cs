@@ -201,6 +201,31 @@ namespace DataAccess
                 }
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public void CreateKlient(Klient KL)
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))

@@ -52,6 +52,23 @@ namespace BusinessLogic
             List<Klient> GetClient = database.KlientList();
             return GetClient;
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public static void CreateKlient(String Navn, string Adresse, string TelefonNr)
         {
             Klient KL = new Klient(Navn, Adresse, TelefonNr);

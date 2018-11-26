@@ -52,6 +52,10 @@ namespace BusinessLogic
             return ydT;
         }
 
+        public static List<Advokat> GetAllAdvokatFromYdelse(int ydelsesTypeNr)
+        {
+            return currentDatabaseInstance.GetAllAdvokatFromYdelse(ydelsesTypeNr);
+        }
         public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer,
             string TimeEstimat, string SagsBeskrivelse, string InterneNoter, string KlientNr, string AdvokatId, string YdelsesTypeNr)
         {

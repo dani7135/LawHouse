@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BusinessLogic;
+using DataAccess;
 
 namespace GUI
 {
@@ -24,8 +25,10 @@ namespace GUI
 
             txt_YdelseTypeNr.DataSource = Controller.GetAllYdelseType();
             txt_YdelseTypeNr.DisplayMember = "YdelsesNavn";
-            txt_MedarbejderNr.DataSource = Controller.GetAllAdvokat();
+            YdelseType ydelseType = (YdelseType)txt_YdelseTypeNr.SelectedItem;
+            txt_MedarbejderNr.DataSource = Controller.GetAllAdvokatFromYdelse(ydelseType.YdelsesTypeNr);
             txt_MedarbejderNr.DisplayMember= "Navn";
+            txt_MedarbejderNr.SelectedIndex = -1;
         }
 
         private void btn_Create_Click(object sender, EventArgs e)
@@ -59,10 +62,9 @@ namespace GUI
 
         private void txt_YdelseTypeNr_SelectedIndexChanged(object sender, EventArgs e)
         {
-           /* switch (switch_on)
-            {
-                default:
-            }*/
+            YdelseType ydelseType = (YdelseType)txt_YdelseTypeNr.SelectedItem;
+            txt_MedarbejderNr.DataSource = Controller.GetAllAdvokatFromYdelse(ydelseType.YdelsesTypeNr);
+            txt_MedarbejderNr.SelectedIndex = -1;
         }
     }
 }

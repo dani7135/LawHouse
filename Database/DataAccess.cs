@@ -169,7 +169,7 @@ namespace DataAccess
                         while (sqld.Read())
                         {
                             YdelseType ydelse = new YdelseType();
-                            ydelse.YdelsesTypeNr = sqld["YdelsesTypeNr"].ToString();
+                            ydelse.YdelsesTypeNr = Convert.ToInt32(sqld["YdelsesTypeNr"]);
                             ydelse.YdelsesNavn = sqld["YdelsesNavn"].ToString();
                             All.Add(ydelse);
                         }
@@ -215,20 +215,45 @@ namespace DataAccess
                 conn.Open();
                 using (SqlDataReader sqld = com.ExecuteReader())
                 {
-                    if (sqld.HasRows)                   
+                    if (sqld.HasRows)
                         while (sqld.Read())
                         {
                             Advokat @advokat = new Advokat();
                             @advokat.AdvokatId = sqld["AdvokatId"].ToString();
                             @advokat.Navn = sqld["Navn"].ToString();
                             All.Add(@advokat);
-                        }                    
+                        }
                     return All;
                 }
             }
 
         }
 
+        public List<Advokat> GetAllAdvokatFromYdelse(int ydelsesTypeNr)
+        {
+            string sqlString = @"SELECT * FROM ADVOKAT
+                                JOIN Tjenesteydelse ON Tjenesteydelse.AdvokatId = Advokat.AdvokatId
+                                WHERE YdelsesTypeNr = " + ydelsesTypeNr;
+            List<Advokat> All = new List<Advokat>();
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            using (SqlCommand com = new SqlCommand(sqlString, conn))
+            {
+                conn.Open();
+                using (SqlDataReader sqld = com.ExecuteReader())
+                {
+                    if (sqld.HasRows)
+                        while (sqld.Read())
+                        {
+                            Advokat @advokat = new Advokat();
+                            @advokat.AdvokatId = sqld["AdvokatId"].ToString();
+                            @advokat.Navn = sqld["Navn"].ToString();
+                            All.Add(@advokat);
+                        }
+                    return All;
+                }
+            }
+
+        }
 
 
 

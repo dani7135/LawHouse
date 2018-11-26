@@ -20,11 +20,11 @@ namespace DataAccess
     }
     public class YdelseType
     {
-        public string YdelsesTypeNr { get; set; }
+        public int YdelsesTypeNr { get; set; }
         public string YdelsesNavn { get; set; }
 
         public YdelseType () { }
-        public YdelseType(string YdelsesTypeNr,string YdelsesNavn)
+        public YdelseType(int YdelsesTypeNr,string YdelsesNavn)
         {
             this.YdelsesNavn = YdelsesNavn;
             this.YdelsesTypeNr = YdelsesTypeNr;

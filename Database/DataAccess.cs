@@ -201,6 +201,21 @@ namespace DataAccess
                 }
             }
         }
+        //public void DeleteFromCase()
+        //{
+
+        //}
+        //public void DeleteFromKlient()
+        //{
+
+        //}
+
+        //public void DeleteFromAdvokat()
+        //{
+
+        //}
+
     }
+
 }
 

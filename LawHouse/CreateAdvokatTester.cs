@@ -34,5 +34,10 @@ namespace GUI
                     MessageBox.Show("Oprettet.");
                     txt_AdvokatNavn.Clear();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

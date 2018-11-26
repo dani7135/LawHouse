@@ -50,7 +50,7 @@
             this.dataSetDropBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetDrop = new GUI.DataSetDrop();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btn_Help = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDrop)).BeginInit();
@@ -95,11 +95,12 @@
             this.objectListView1.FullRowSelect = true;
             this.objectListView1.GridLines = true;
             this.objectListView1.HasCollapsibleGroups = false;
-            this.objectListView1.Location = new System.Drawing.Point(44, 77);
+            this.objectListView1.Location = new System.Drawing.Point(33, 63);
+            this.objectListView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.objectListView1.Name = "objectListView1";
             this.objectListView1.ShowGroups = false;
             this.objectListView1.ShowImagesOnSubItems = true;
-            this.objectListView1.Size = new System.Drawing.Size(912, 348);
+            this.objectListView1.Size = new System.Drawing.Size(685, 284);
             this.objectListView1.TabIndex = 1;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.UseFiltering = true;
@@ -182,9 +183,10 @@
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(44, 12);
+            this.btn_Update.Location = new System.Drawing.Point(33, 10);
+            this.btn_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(124, 25);
+            this.btn_Update.Size = new System.Drawing.Size(93, 20);
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Opdater sag";
             this.btn_Update.UseVisualStyleBackColor = true;
@@ -192,9 +194,10 @@
             // 
             // btn_slet
             // 
-            this.btn_slet.Location = new System.Drawing.Point(44, 48);
+            this.btn_slet.Location = new System.Drawing.Point(33, 39);
+            this.btn_slet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_slet.Name = "btn_slet";
-            this.btn_slet.Size = new System.Drawing.Size(124, 23);
+            this.btn_slet.Size = new System.Drawing.Size(93, 19);
             this.btn_slet.TabIndex = 2;
             this.btn_slet.Text = "Slet sag";
             this.btn_slet.UseVisualStyleBackColor = true;
@@ -212,31 +215,34 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(793, 43);
+            this.comboBox1.Location = new System.Drawing.Point(595, 35);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button1
+            // Btn_Help
             // 
-            this.button1.Location = new System.Drawing.Point(470, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_Help.Location = new System.Drawing.Point(145, 39);
+            this.Btn_Help.Name = "Btn_Help";
+            this.Btn_Help.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Help.TabIndex = 7;
+            this.Btn_Help.Text = "?";
+            this.Btn_Help.UseVisualStyleBackColor = true;
+            this.Btn_Help.Click += new System.EventHandler(this.button1_Click);
             // 
             // Overblik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 530);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(748, 431);
+            this.Controls.Add(this.Btn_Help);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_slet);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.objectListView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Overblik";
             this.Text = "Overblik";
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
@@ -269,6 +275,6 @@
         private BrightIdeasSoftware.OLVColumn Navn;
         private BrightIdeasSoftware.OLVColumn Adresse;
         private BrightIdeasSoftware.OLVColumn TelefonNr;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_Help;
     }
 }

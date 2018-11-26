@@ -40,5 +40,10 @@ namespace GUI
             CreateAdvokatTester advokatTester = new CreateAdvokatTester();
             advokatTester.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

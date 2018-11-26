@@ -284,7 +284,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(463, 495);
+            this.ClientSize = new System.Drawing.Size(463, 530);
             this.Controls.Add(this.txt_MedarbejderNr);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btn_GoToFormCreateAdvokat);

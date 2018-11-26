@@ -14,19 +14,13 @@ namespace GUI
 {
     public partial class Overblik : Form
     {
-     
-
         public Overblik()
         {
             InitializeComponent();
             objectListView1.SetObjects(Controller.GetAllClient());
-     
-
             comboBox1.DataSource = Controller.GetAllItems();
             comboBox1.DisplayMember = "What_type";
-        
         }
-
         private void btn_Update_Click(object sender, EventArgs e)
         {
             if (objectListView1.SelectedObjects.Count == 1)

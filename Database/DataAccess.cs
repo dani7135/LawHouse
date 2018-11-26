@@ -149,7 +149,7 @@ namespace DataAccess
 
         public void CreateAdvokat(Advokat ad)
         {
-            string sqlString = $"INSERT INTO Advokat(Navn) VALUES ('{ad.Navn}')";
+            string sqlString = $"INSERT INTO Advokat(Navn) VALUES ('{ad.AdvokatId} ', {ad.Navn}')";
             RunSqlCommand(sqlString);
         }
 
@@ -204,7 +204,7 @@ namespace DataAccess
                         while (sqld.Read())
                         {
                             Advokat @advokat = new Advokat();
-                            
+                            @advokat.AdvokatId = sqld["AdvokatId"].ToString();
                             @advokat.Navn = sqld["Navn"].ToString();
                             All.Add(@advokat);
                         }

@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txt_AdvokatId = new System.Windows.Forms.TextBox();
             this.txt_SpecialeNavn = new System.Windows.Forms.TextBox();
+            this.txt2_AdvokatId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn_CreateAdvokat
@@ -106,11 +107,19 @@
             this.txt_SpecialeNavn.Size = new System.Drawing.Size(100, 22);
             this.txt_SpecialeNavn.TabIndex = 7;
             // 
+            // txt2_AdvokatId
+            // 
+            this.txt2_AdvokatId.Location = new System.Drawing.Point(277, 21);
+            this.txt2_AdvokatId.Name = "txt2_AdvokatId";
+            this.txt2_AdvokatId.Size = new System.Drawing.Size(100, 22);
+            this.txt2_AdvokatId.TabIndex = 8;
+            // 
             // CreateAdvokatTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 314);
+            this.Controls.Add(this.txt2_AdvokatId);
             this.Controls.Add(this.txt_SpecialeNavn);
             this.Controls.Add(this.txt_AdvokatId);
             this.Controls.Add(this.label2);
@@ -136,5 +145,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_AdvokatId;
         private System.Windows.Forms.TextBox txt_SpecialeNavn;
+        private System.Windows.Forms.TextBox txt2_AdvokatId;
     }
 }

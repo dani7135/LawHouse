@@ -149,20 +149,8 @@ namespace DataAccess
 
         public void CreateAdvokat(Advokat ad)
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
-            {
-                using (SqlCommand com = new SqlCommand())
-                {
-                    com.Connection = conn;
-                    conn.Open();
-
-                    string sqlString = $"INSERT INTO Advokat(Navn) VALUES ('{ad.Navn}')";
-
-                    com.CommandText = sqlString;
-                    com.ExecuteNonQuery();
-                }
-
-            }
+            string sqlString = $"INSERT INTO Advokat(Navn) VALUES ('{ad.Navn}')";
+            RunSqlCommand(sqlString);
         }
 
         public void AddSpecialToAdvokat(string efteruddannelse, int advokatId)
@@ -171,19 +159,8 @@ namespace DataAccess
          - Dennie 
          */
         {
-            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
-            {
-                using (SqlCommand com = new SqlCommand())
-                {
-                    com.Connection = conn;
-                    conn.Open();
-
-                    string sqlString = $"INSERT INTO Efteruddannelse(Navn, AdvokatId) VALUES ('{efteruddannelse}', {advokatId})";
-
-                    com.CommandText = sqlString;
-                    com.ExecuteNonQuery();
-                }
-            }
+            string sqlString = $"INSERT INTO Efteruddannelse(Navn, AdvokatId) VALUES ('{efteruddannelse}', {advokatId})";
+            RunSqlCommand(sqlString);
         }
 
         public List<Klient> KlientList()

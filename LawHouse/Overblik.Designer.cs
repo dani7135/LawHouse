@@ -46,7 +46,6 @@
             this.Adresse = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.TelefonNr = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.btn_Update = new System.Windows.Forms.Button();
-            this.btn_slet = new System.Windows.Forms.Button();
             this.dataSetDropBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetDrop = new GUI.DataSetDrop();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -98,7 +97,7 @@
             this.objectListView1.Name = "objectListView1";
             this.objectListView1.ShowGroups = false;
             this.objectListView1.ShowImagesOnSubItems = true;
-            this.objectListView1.Size = new System.Drawing.Size(912, 348);
+            this.objectListView1.Size = new System.Drawing.Size(915, 348);
             this.objectListView1.TabIndex = 1;
             this.objectListView1.UseCompatibleStateImageBehavior = false;
             this.objectListView1.UseFiltering = true;
@@ -181,22 +180,13 @@
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(44, 12);
+            this.btn_Update.Location = new System.Drawing.Point(44, 42);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(124, 25);
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Opdater sag";
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
-            // 
-            // btn_slet
-            // 
-            this.btn_slet.Location = new System.Drawing.Point(44, 48);
-            this.btn_slet.Name = "btn_slet";
-            this.btn_slet.Size = new System.Drawing.Size(124, 23);
-            this.btn_slet.TabIndex = 2;
-            this.btn_slet.Text = "Slet sag";
-            this.btn_slet.UseVisualStyleBackColor = true;
             // 
             // dataSetDropBindingSource
             // 
@@ -223,7 +213,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 530);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btn_slet);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.objectListView1);
             this.Name = "Overblik";
@@ -249,7 +238,6 @@
         private BrightIdeasSoftware.OLVColumn KlientNr;
         private BrightIdeasSoftware.OLVColumn MedarbejderNr;
         private System.Windows.Forms.Button btn_Update;
-        private System.Windows.Forms.Button btn_slet;
         private System.Windows.Forms.BindingSource dataSetDropBindingSource;
         private DataSetDrop dataSetDrop;
         private System.Windows.Forms.ComboBox comboBox1;

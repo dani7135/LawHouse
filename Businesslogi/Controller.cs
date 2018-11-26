@@ -22,7 +22,21 @@ namespace BusinessLogic
             List<Case> GetAll = database.GetAllCase();
 
             return GetAll;
-        }   
+        }
+        public static List<Klient> GetAllClient()
+        {
+            Klient klient = new Klient();
+            List<Klient> GetClient = database.KlientList();
+            return GetClient;
+        }
+  
+
+        public static List<ListItems> GetAllItems()
+        {
+            ListItems list = new ListItems();
+            List<ListItems> GetItems = database.GetList();
+            return GetItems;
+        }
         public static void Update(object UpdateObject)
         {
 
@@ -30,13 +44,6 @@ namespace BusinessLogic
             database.Update(@case);
 
         }
-        public static List<ListItems> GetAllItems()
-        {
-            ListItems list = new ListItems();
-            List<ListItems> GetItems = database.GetList();
-            return GetItems;
-        }
-
         public static void CreateAdvokat(string advokatNavn)
         {
             Advokat ad = new Advokat(advokatNavn);
@@ -46,12 +53,7 @@ namespace BusinessLogic
         {
             database.AddSpecialToAdvokat(specialName, advokatId);
         }
-        public static List<Klient> GetAllClient()
-        {
-            Klient klient = new Klient();
-            List<Klient> GetClient = database.KlientList();
-            return GetClient;
-        }
+     
 
     }
 }

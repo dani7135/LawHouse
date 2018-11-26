@@ -51,6 +51,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Advokat_navn = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.AdvokatId = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
+            this.Btn_Help = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDrop)).BeginInit();
@@ -99,7 +100,8 @@
             this.objectListView1.FullRowSelect = true;
             this.objectListView1.GridLines = true;
             this.objectListView1.HasCollapsibleGroups = false;
-            this.objectListView1.Location = new System.Drawing.Point(44, 77);
+            this.objectListView1.Location = new System.Drawing.Point(33, 63);
+            this.objectListView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.objectListView1.Name = "objectListView1";
             this.objectListView1.ShowGroups = false;
             this.objectListView1.ShowImagesOnSubItems = true;
@@ -186,13 +188,24 @@
             // 
             // btn_Update
             // 
-            this.btn_Update.Location = new System.Drawing.Point(44, -9);
+            this.btn_Update.Location = new System.Drawing.Point(33, 10);
+            this.btn_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(124, 25);
+            this.btn_Update.Size = new System.Drawing.Size(93, 20);
             this.btn_Update.TabIndex = 1;
             this.btn_Update.Text = "Opdater sag";
             this.btn_Update.UseVisualStyleBackColor = true;
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
+            // 
+            // btn_slet
+            // 
+            this.btn_slet.Location = new System.Drawing.Point(33, 39);
+            this.btn_slet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_slet.Name = "btn_slet";
+            this.btn_slet.Size = new System.Drawing.Size(93, 19);
+            this.btn_slet.TabIndex = 2;
+            this.btn_slet.Text = "Slet sag";
+            this.btn_slet.UseVisualStyleBackColor = true;
             // 
             // dataSetDropBindingSource
             // 
@@ -213,6 +226,7 @@
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // Btn_Help
             // Advokat_navn
             // 
             this.Advokat_navn.AspectName = "Navn";
@@ -222,15 +236,24 @@
             // 
             this.AdvokatId.AspectName = "AdvokatId";
             this.AdvokatId.Text = "AdvokatId";
+            this.Btn_Help.Location = new System.Drawing.Point(145, 39);
+            this.Btn_Help.Name = "Btn_Help";
+            this.Btn_Help.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Help.TabIndex = 7;
+            this.Btn_Help.Text = "?";
+            this.Btn_Help.UseVisualStyleBackColor = true;
+            this.Btn_Help.Click += new System.EventHandler(this.button1_Click);
             // 
             // Overblik
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 530);
+            this.ClientSize = new System.Drawing.Size(748, 431);
+            this.Controls.Add(this.Btn_Help);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_Update);
             this.Controls.Add(this.objectListView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Overblik";
             this.Text = "Overblik";
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).EndInit();
@@ -264,5 +287,6 @@
         private BrightIdeasSoftware.OLVColumn TelefonNr;
         private BrightIdeasSoftware.OLVColumn AdvokatId;
         private BrightIdeasSoftware.OLVColumn Advokat_navn;
+        private System.Windows.Forms.Button Btn_Help;
     }
 }

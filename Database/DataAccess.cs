@@ -146,7 +146,7 @@ namespace DataAccess
                 }
             }
         }
-
+        
         public void CreateAdvokat(Advokat ad)
         {
             string sqlString = $"INSERT INTO Advokat(Navn) VALUES ('{ad.AdvokatId} ', {ad.Navn}')";
@@ -215,6 +215,62 @@ namespace DataAccess
             }
            
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public void CreateKlient(Klient KL)
+        {
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            {
+                using (SqlCommand com = new SqlCommand())
+                {
+                    com.Connection = conn;
+                    conn.Open();
+
+                    string sqlString = $"INSERT INTO KLient(Navn, Adresse, TelefonNr) VALUES ('{KL.Navn}', '{KL.Adresse}', '{KL.TelefonNr}')";
+
+                    com.CommandText = sqlString;
+                    com.ExecuteNonQuery();
+                }
+            }
+        }
+        //public void DeleteFromCase()
+        //{
+
+        //}
+        //public void DeleteFromKlient()
+        //{
+
+        //}
+
+        //public void DeleteFromAdvokat()
+        //{
+
+        //}
+
     }
+
 }
 

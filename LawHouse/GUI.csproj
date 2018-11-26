@@ -65,6 +65,12 @@
     <Compile Include="New_case.Designer.cs">
       <DependentUpon>New_case.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpretKLient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpretKLient.Designer.cs">
+      <DependentUpon>OpretKLient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Overblik.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="New_case.resx">
       <DependentUpon>New_case.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpretKLient.resx">
+      <DependentUpon>OpretKLient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Overblik.resx">
       <DependentUpon>Overblik.cs</DependentUpon>

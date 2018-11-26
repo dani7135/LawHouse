@@ -227,6 +227,7 @@ namespace DataAccess
                         while (sqld.Read())
                         {
                             Advokat @advokat = new Advokat();
+                            
                             @advokat.Navn = sqld["Navn"].ToString();
                             All.Add(@advokat);
                         }

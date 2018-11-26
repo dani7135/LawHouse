@@ -42,21 +42,30 @@ namespace DataAccess
                }
            }
            */
-        public void CreateCase(Case c)//Grunden til at der den her er fordi den tager en case og opretter det ud for properties
+        private void RunSqlCommand(string commandToRun) //Made by Daniella, refactored by Julius
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
             {
                 using (SqlCommand com = new SqlCommand())
                 {
                     com.Connection = conn;
-                    conn.Open();
-
-                    string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
-                    com.CommandText = sqlString;
-                    com.ExecuteNonQuery();
+                    try
+                    {
+                        conn.Open();
+                        com.CommandText = commandToRun;
+                        com.ExecuteNonQuery();
+                    }
+                    finally
+                    {
+                        conn.Close();
+                    }
                 }
-
             }
+        }
+        public void CreateCase(Case c) //Grunden til at der den her er fordi den tager en case og opretter det ud for properties
+        {
+            string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
+            RunSqlCommand(sqlString);
         }
 
         public List<Case> GetAllCase()

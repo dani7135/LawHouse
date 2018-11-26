@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-   public class ListItem
+   public class ListItems
     {
         public string ListID { get; set; }
         public string What_type { get; set; }
 
-        public ListItem() { }
-        public ListItem(string What_type)
+        public ListItems() { }
+        public ListItems(string What_type)
         {
             this.What_type = What_type;
         }

@@ -42,8 +42,6 @@ namespace DataAccess
                }
            }
            */
-       
-
         public void CreateCase(Case c)//Grunden til at der den her er fordi den tager en case og opretter det ud for properties
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
@@ -53,7 +51,7 @@ namespace DataAccess
                     com.Connection = conn;
                     conn.Open();
 
-                    string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId, YdelsesTypeNr)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}' , '{c.YdelsesTypeNr}')";
+                    string sqlString = $"insert into Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter , KlientNr, AdvokatId)" + $"values('{c.Arbejdstitel}' , '{c.StartDato}' ,'{c.SlutDato}' ,'{c.Kørselstimer}' ,'{c.TimeEstimat}' , '{c.SagsBeskrivelse}',  '{c.InterneNoter}' , '{c.KlientNr}', '{c.AdvokatId}')";
                     com.CommandText = sqlString;
                     com.ExecuteNonQuery();
                 }
@@ -89,7 +87,6 @@ namespace DataAccess
                             @case.InterneNoter = sqld["InterneNoter"].ToString();
                             @case.KlientNr = sqld["Klientnr"].ToString();
                             @case.AdvokatId = sqld["AdvokatId"].ToString();
-                            @case.YdelsesTypeNr = sqld["YdelsesTypeNr"].ToString();
                             Alle.Add(@case);
                         }
                     return Alle;
@@ -97,7 +94,7 @@ namespace DataAccess
             }
 
         }
-        public void UpdateCase(Case @case)
+        public void Update(Case @case)
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
             {
@@ -107,7 +104,7 @@ namespace DataAccess
                     conn.Open();
 
                     string sqlString =
-                    $"update Sag set Arbejdstitel = '{@case.Arbejdstitel}', StartDato = '{@case.StartDato}', SlutDato = '{@case.SlutDato}', Kørselstimer = '{@case.Kørselstimer}', TimeEstimat = '{@case.TimeEstimat}', SagsBeskrivelse = '{@case.SagsBeskrivelse}', InterneNoter = '{@case.InterneNoter}', KlientNr = '{@case.KlientNr}', AdvokatId = '{@case.AdvokatId}', YdelsesTypeNr = '{@case.YdelsesTypeNr}' " +
+                    $"update Sag set Arbejdstitel = '{@case.Arbejdstitel}', StartDato = '{@case.StartDato}', SlutDato = '{@case.SlutDato}', Kørselstimer = '{@case.Kørselstimer}', TimeEstimat = '{@case.TimeEstimat}', SagsBeskrivelse = '{@case.SagsBeskrivelse}', InterneNoter = '{@case.InterneNoter}', KlientNr = '{@case.KlientNr}', AdvokatId = '{@case.AdvokatId}' " +
                     $"where SagsNr = {@case.SagsNr}";
                     com.CommandText = sqlString;
                     com.ExecuteNonQuery();
@@ -116,10 +113,10 @@ namespace DataAccess
 
             }
         }
-        public List<ListItem> GetList()
+        public List<ListItems> GetList()
         {
             string sqlString = "select * from List";
-            List<ListItem> All = new List<ListItem>();
+            List<ListItems> All = new List<ListItems>();
 
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
             using (SqlCommand com = new SqlCommand(sqlString, conn))
@@ -130,12 +127,51 @@ namespace DataAccess
                     if (sqld.HasRows)
                         while (sqld.Read())
                         {
-                            ListItem @list = new ListItem();
+                            ListItems @list = new ListItems();
                             @list.ListID = sqld["ListID"].ToString();
                             @list.What_type = sqld["What_type"].ToString();
                             All.Add(@list);
                         }
                     return All;
+                }
+            }
+        }
+
+        public void CreateAdvokat(Advokat ad)
+        {
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            {
+                using (SqlCommand com = new SqlCommand())
+                {
+                    com.Connection = conn;
+                    conn.Open();
+
+                    string sqlString = $"INSERT INTO Advokat(Navn) VALUES ('{ad.Navn}')";
+
+                    com.CommandText = sqlString;
+                    com.ExecuteNonQuery();
+                }
+
+            }
+        }
+
+        public void AddSpecialToAdvokat(string efteruddannelse, int advokatId)
+        /* Når en advokat skal have tilføjet et speciale/efteruddannelse, skal man i vores database bare indtaste et "navn" på specialet + "advokat id'et", som skal have denne efteruddannelse.
+         * Havde forstillet mig, at man i vores ViewListe skal kunne vælge "vis advokater" og derinde så tilføje efteruddannelse ud fra en "valgt" advokats id.
+         - Dennie 
+         */
+        {
+            using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnString))
+            {
+                using (SqlCommand com = new SqlCommand())
+                {
+                    com.Connection = conn;
+                    conn.Open();
+
+                    string sqlString = $"INSERT INTO Efteruddannelse(Navn, AdvokatId) VALUES ('{efteruddannelse}', {advokatId})";
+
+                    com.CommandText = sqlString;
+                    com.ExecuteNonQuery();
                 }
             }
         }
@@ -165,10 +201,6 @@ namespace DataAccess
                 }
             }
         }
-
-
     }
-
-
 }
 

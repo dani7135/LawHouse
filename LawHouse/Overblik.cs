@@ -43,7 +43,7 @@ namespace GUI
         //Der er tilføjet en ekstra kolonne, fordi man ikke kan skjule den primære kolonnen
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ListItem listItem = (ListItem)comboBox1.SelectedItem;
+            ListItems listItem = (ListItems)comboBox1.SelectedItem;
             switch (listItem.What_type)
             {
                 

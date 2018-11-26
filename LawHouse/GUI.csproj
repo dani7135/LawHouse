@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateAdvokatTester.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAdvokatTester.Designer.cs">
+      <DependentUpon>CreateAdvokatTester.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataSetDrop.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CreateAdvokatTester.resx">
+      <DependentUpon>CreateAdvokatTester.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="New_case.resx">
       <DependentUpon>New_case.cs</DependentUpon>
     </EmbeddedResource>

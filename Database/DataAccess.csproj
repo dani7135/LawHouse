@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advokat.cs" />
     <Compile Include="Case.cs" />
     <Compile Include="DataAccess.cs" />
     <Compile Include="Klient.cs" />
@@ -49,7 +50,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="ListItem.cs" />
+    <Compile Include="ListItems.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

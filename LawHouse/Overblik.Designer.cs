@@ -50,7 +50,6 @@
             this.dataSetDropBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetDrop = new GUI.DataSetDrop();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.objectListView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDropBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetDrop)).BeginInit();
@@ -218,21 +217,11 @@
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(470, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Overblik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(997, 530);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btn_slet);
             this.Controls.Add(this.btn_Update);
@@ -269,6 +258,5 @@
         private BrightIdeasSoftware.OLVColumn Navn;
         private BrightIdeasSoftware.OLVColumn Adresse;
         private BrightIdeasSoftware.OLVColumn TelefonNr;
-        private System.Windows.Forms.Button button1;
     }
 }

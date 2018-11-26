@@ -54,7 +54,7 @@
             this.txt_MedarbejderNr = new System.Windows.Forms.ComboBox();
             this.Sags = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_YdelseTypeNr = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_Create
@@ -294,13 +294,13 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "SlutDato";
             // 
-            // comboBox1
+            // txt_YdelseTypeNr
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(372, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 30;
+            this.txt_YdelseTypeNr.FormattingEnabled = true;
+            this.txt_YdelseTypeNr.Location = new System.Drawing.Point(372, 20);
+            this.txt_YdelseTypeNr.Name = "txt_YdelseTypeNr";
+            this.txt_YdelseTypeNr.Size = new System.Drawing.Size(121, 24);
+            this.txt_YdelseTypeNr.TabIndex = 30;
             // 
             // New_case
             // 
@@ -309,7 +309,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(675, 570);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.txt_YdelseTypeNr);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Sags);
             this.Controls.Add(this.label11);
@@ -372,7 +372,7 @@
         private System.Windows.Forms.ComboBox txt_MedarbejderNr;
         private System.Windows.Forms.Label Sags;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox txt_YdelseTypeNr;
     }
 }
 

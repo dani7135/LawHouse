@@ -57,28 +57,10 @@ namespace BusinessLogic
         {
             currentDatabaseInstance.AddSpecialToAdvokat(specialName, advokatId);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public static void CreateKlient(String Navn, string Adresse, string TelefonNr)
         {
             Klient KL = new Klient(Navn, Adresse, TelefonNr);
             currentDatabaseInstance.CreateKlient(KL);
         }
-
     }
 }

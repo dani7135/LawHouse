@@ -31,7 +31,6 @@
             this.btn_Create = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_nr = new System.Windows.Forms.TextBox();
@@ -48,21 +47,22 @@
             this.txt_InterneNoter = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_YdelseTypeNr = new System.Windows.Forms.TextBox();
             this.btn_GoToFormCreateAdvokat = new System.Windows.Forms.Button();
             this.Btn_Help = new System.Windows.Forms.Button();
             this.Btn_CreateKlient = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_MedarbejderNr = new System.Windows.Forms.ComboBox();
             this.Sags = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_Create
             // 
-            this.btn_Create.Location = new System.Drawing.Point(325, 377);
+            this.btn_Create.Location = new System.Drawing.Point(3, 411);
             this.btn_Create.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Create.Name = "btn_Create";
-            this.btn_Create.Size = new System.Drawing.Size(128, 46);
+            this.btn_Create.Size = new System.Drawing.Size(161, 46);
             this.btn_Create.TabIndex = 0;
             this.btn_Create.Text = "Opret Sag";
             this.btn_Create.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 95);
+            this.label2.Location = new System.Drawing.Point(251, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 2;
@@ -80,25 +80,16 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 134);
+            this.label3.Location = new System.Drawing.Point(251, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "StartDato";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 331);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "SlutDato";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 213);
+            this.label5.Location = new System.Drawing.Point(251, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 17);
             this.label5.TabIndex = 5;
@@ -107,7 +98,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(35, 241);
+            this.label6.Location = new System.Drawing.Point(251, 267);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 17);
             this.label6.TabIndex = 6;
@@ -116,7 +107,7 @@
             // txt_nr
             // 
             this.txt_nr.Enabled = false;
-            this.txt_nr.Location = new System.Drawing.Point(156, 53);
+            this.txt_nr.Location = new System.Drawing.Point(372, 67);
             this.txt_nr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_nr.Name = "txt_nr";
             this.txt_nr.Size = new System.Drawing.Size(121, 22);
@@ -124,7 +115,7 @@
             // 
             // txt_kørsel
             // 
-            this.txt_kørsel.Location = new System.Drawing.Point(156, 208);
+            this.txt_kørsel.Location = new System.Drawing.Point(372, 222);
             this.txt_kørsel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_kørsel.Name = "txt_kørsel";
             this.txt_kørsel.Size = new System.Drawing.Size(121, 22);
@@ -132,7 +123,7 @@
             // 
             // txt_titel
             // 
-            this.txt_titel.Location = new System.Drawing.Point(156, 90);
+            this.txt_titel.Location = new System.Drawing.Point(372, 104);
             this.txt_titel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_titel.Name = "txt_titel";
             this.txt_titel.Size = new System.Drawing.Size(121, 22);
@@ -140,7 +131,7 @@
             // 
             // txt_time
             // 
-            this.txt_time.Location = new System.Drawing.Point(156, 236);
+            this.txt_time.Location = new System.Drawing.Point(372, 262);
             this.txt_time.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_time.Name = "txt_time";
             this.txt_time.Size = new System.Drawing.Size(121, 22);
@@ -148,15 +139,15 @@
             // 
             // Slutdato
             // 
-            this.Slutdato.Location = new System.Drawing.Point(156, 169);
+            this.Slutdato.Location = new System.Drawing.Point(372, 183);
             this.Slutdato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Slutdato.Name = "Slutdato";
-            this.Slutdato.Size = new System.Drawing.Size(200, 22);
+            this.Slutdato.Size = new System.Drawing.Size(170, 22);
             this.Slutdato.TabIndex = 12;
             // 
             // txt_KlientNr
             // 
-            this.txt_KlientNr.Location = new System.Drawing.Point(156, 354);
+            this.txt_KlientNr.Location = new System.Drawing.Point(372, 474);
             this.txt_KlientNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_KlientNr.Name = "txt_KlientNr";
             this.txt_KlientNr.Size = new System.Drawing.Size(121, 22);
@@ -165,7 +156,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(41, 278);
+            this.label7.Location = new System.Drawing.Point(251, 436);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(88, 17);
             this.label7.TabIndex = 14;
@@ -174,7 +165,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(35, 359);
+            this.label8.Location = new System.Drawing.Point(253, 479);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 17);
             this.label8.TabIndex = 13;
@@ -183,7 +174,7 @@
             // StartDato
             // 
             this.StartDato.Enabled = false;
-            this.StartDato.Location = new System.Drawing.Point(156, 129);
+            this.StartDato.Location = new System.Drawing.Point(372, 143);
             this.StartDato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.StartDato.Name = "StartDato";
             this.StartDato.Size = new System.Drawing.Size(121, 22);
@@ -191,10 +182,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(325, 30);
+            this.button1.Location = new System.Drawing.Point(3, 361);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(128, 46);
+            this.button1.Size = new System.Drawing.Size(161, 28);
             this.button1.TabIndex = 18;
             this.button1.Text = "Se oversigt";
             this.button1.UseVisualStyleBackColor = true;
@@ -202,7 +193,7 @@
             // 
             // txt_SagsBeskrivelse
             // 
-            this.txt_SagsBeskrivelse.Location = new System.Drawing.Point(156, 299);
+            this.txt_SagsBeskrivelse.Location = new System.Drawing.Point(372, 303);
             this.txt_SagsBeskrivelse.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txt_SagsBeskrivelse.Name = "txt_SagsBeskrivelse";
             this.txt_SagsBeskrivelse.Size = new System.Drawing.Size(121, 22);
@@ -210,7 +201,7 @@
             // 
             // txt_InterneNoter
             // 
-            this.txt_InterneNoter.Location = new System.Drawing.Point(156, 326);
+            this.txt_InterneNoter.Location = new System.Drawing.Point(372, 361);
             this.txt_InterneNoter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_InterneNoter.Name = "txt_InterneNoter";
             this.txt_InterneNoter.Size = new System.Drawing.Size(121, 22);
@@ -219,7 +210,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 304);
+            this.label9.Location = new System.Drawing.Point(251, 303);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(112, 17);
             this.label9.TabIndex = 21;
@@ -228,20 +219,11 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(35, 331);
+            this.label10.Location = new System.Drawing.Point(251, 364);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(87, 17);
             this.label10.TabIndex = 22;
             this.label10.Text = "InterneNoter";
-            // 
-            // txt_YdelseTypeNr
-            // 
-            this.txt_YdelseTypeNr.HideSelection = false;
-            this.txt_YdelseTypeNr.Location = new System.Drawing.Point(156, 416);
-            this.txt_YdelseTypeNr.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.txt_YdelseTypeNr.Name = "txt_YdelseTypeNr";
-            this.txt_YdelseTypeNr.Size = new System.Drawing.Size(100, 22);
-            this.txt_YdelseTypeNr.TabIndex = 23;
             // 
             // btn_GoToFormCreateAdvokat
             // 
@@ -256,10 +238,10 @@
             // 
             // Btn_Help
             // 
-            this.Btn_Help.Location = new System.Drawing.Point(325, 82);
-            this.Btn_Help.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Help.Location = new System.Drawing.Point(3, 104);
+            this.Btn_Help.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Help.Name = "Btn_Help";
-            this.Btn_Help.Size = new System.Drawing.Size(100, 28);
+            this.Btn_Help.Size = new System.Drawing.Size(161, 28);
             this.Btn_Help.TabIndex = 25;
             this.Btn_Help.Text = "?";
             this.Btn_Help.UseVisualStyleBackColor = true;
@@ -267,10 +249,10 @@
             // 
             // Btn_CreateKlient
             // 
-            this.Btn_CreateKlient.Location = new System.Drawing.Point(171, 2);
-            this.Btn_CreateKlient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_CreateKlient.Location = new System.Drawing.Point(3, 56);
+            this.Btn_CreateKlient.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_CreateKlient.Name = "Btn_CreateKlient";
-            this.Btn_CreateKlient.Size = new System.Drawing.Size(148, 28);
+            this.Btn_CreateKlient.Size = new System.Drawing.Size(161, 28);
             this.Btn_CreateKlient.TabIndex = 26;
             this.Btn_CreateKlient.Text = "Gå Til Opret Klient";
             this.Btn_CreateKlient.UseVisualStyleBackColor = true;
@@ -279,7 +261,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(31, 419);
+            this.label11.Location = new System.Drawing.Point(254, 27);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(98, 17);
@@ -288,7 +270,7 @@
             // 
             // txt_MedarbejderNr
             // 
-            this.txt_MedarbejderNr.Location = new System.Drawing.Point(156, 271);
+            this.txt_MedarbejderNr.Location = new System.Drawing.Point(372, 433);
             this.txt_MedarbejderNr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MedarbejderNr.Name = "txt_MedarbejderNr";
             this.txt_MedarbejderNr.Size = new System.Drawing.Size(132, 24);
@@ -297,11 +279,28 @@
             // Sags
             // 
             this.Sags.AutoSize = true;
-            this.Sags.Location = new System.Drawing.Point(35, 53);
+            this.Sags.Location = new System.Drawing.Point(251, 67);
             this.Sags.Name = "Sags";
             this.Sags.Size = new System.Drawing.Size(55, 17);
             this.Sags.TabIndex = 28;
             this.Sags.Text = "SagsNr";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(251, 188);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "SlutDato";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(372, 20);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 30;
             // 
             // New_case
             // 
@@ -309,13 +308,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1323, 523);
+            this.ClientSize = new System.Drawing.Size(675, 570);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Sags);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Btn_CreateKlient);
             this.Controls.Add(this.Btn_Help);
             this.Controls.Add(this.btn_GoToFormCreateAdvokat);
-            this.Controls.Add(this.txt_YdelseTypeNr);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_InterneNoter);
@@ -333,7 +333,6 @@
             this.Controls.Add(this.txt_nr);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_Create);
@@ -350,7 +349,6 @@
         private System.Windows.Forms.Button btn_Create;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_nr;
@@ -367,13 +365,14 @@
         private System.Windows.Forms.TextBox txt_InterneNoter;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txt_YdelseTypeNr;
         private System.Windows.Forms.Button btn_GoToFormCreateAdvokat;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button Btn_Help;
         private System.Windows.Forms.Button Btn_CreateKlient;
         private System.Windows.Forms.ComboBox txt_MedarbejderNr;
         private System.Windows.Forms.Label Sags;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

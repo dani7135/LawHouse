@@ -18,15 +18,8 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
+     
+        
 
         private void Btn_CreateKLient_Click(object sender, EventArgs e)
         {

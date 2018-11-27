@@ -26,6 +26,7 @@ namespace GUI
             txt_YdelseTypeNr.DataSource = Controller.GetAllYdelseType();
             txt_YdelseTypeNr.DisplayMember = "YdelsesNavn";
             YdelseType ydelseType = (YdelseType)txt_YdelseTypeNr.SelectedItem;
+            txt_YdelseTypeNr.ValueMember = "YdelsesTypeNr";
             txt_MedarbejderNr.DataSource = Controller.GetAllAdvokatFromYdelse(ydelseType.YdelsesTypeNr);
             txt_MedarbejderNr.DisplayMember= "Navn";
             txt_MedarbejderNr.ValueMember = "AdvokatId";

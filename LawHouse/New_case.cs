@@ -24,7 +24,7 @@ namespace GUI
             Slutdato.MinDate = DateTime.Today;
 
             txt_YdelseTypeNr.DataSource = Controller.GetAllYdelseType();
-            txt_YdelseTypeNr.DisplayMember = "YdelsesTypeNr";
+            txt_YdelseTypeNr.DisplayMember = "YdelsesNavn";
             YdelseType ydelseType = (YdelseType)txt_YdelseTypeNr.SelectedItem;
             txt_MedarbejderNr.DataSource = Controller.GetAllAdvokatFromYdelse(ydelseType.YdelsesTypeNr);
             txt_MedarbejderNr.DisplayMember= "Navn";

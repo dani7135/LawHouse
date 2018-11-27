@@ -43,7 +43,7 @@ namespace UnitTestLawHouse
         [TestMethod]
         public void CaseFillTest()
         {
-            Case @case = new Case();
+            Sag @case = new Sag();
             @case.SagsNr = "1";
             @case.Arbejdstitel = "TheJob";
             @case.StartDato = "21-11-2018";

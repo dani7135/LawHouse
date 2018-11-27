@@ -17,7 +17,7 @@ namespace GUI
         public Overblik()
         {
             InitializeComponent();
-            objectListView1.SetObjects(Controller.GetAllClient());
+            objectListView1.SetObjects(Controller.GetAllKlient());
             comboBox1.DataSource = Controller.GetAllItems();
             comboBox1.DisplayMember = "What_type";
         }
@@ -27,7 +27,7 @@ namespace GUI
             {
                 if (objectListView1.SelectedObject != null)
                 {
-                    Controller.Update(objectListView1.SelectedObject);
+                    Controller.UpdateSag(objectListView1.SelectedObject);
                     MessageBox.Show("Opdateret");
                 }
             }
@@ -43,7 +43,7 @@ namespace GUI
             {
                 
                 case "Klient":
-                    objectListView1.SetObjects(Controller.GetAllClient());
+                    objectListView1.SetObjects(Controller.GetAllKlient());
                     foreach (var item in objectListView1.AllColumns)
                     {
                         item.IsVisible = false;
@@ -55,7 +55,7 @@ namespace GUI
                     break;
 
                 case "Sag":
-                    objectListView1.SetObjects(Controller.GetAllCases());
+                    objectListView1.SetObjects(Controller.GetAllSag());
                     foreach (var item in objectListView1.AllColumns)
                     {
                         item.IsVisible = false;

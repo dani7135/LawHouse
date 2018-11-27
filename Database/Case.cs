@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    public class Case
+    public class Sag
     {
         public string SagsNr { get; set; }
         public string Arbejdstitel { get; set; }
@@ -17,11 +17,11 @@ namespace DataAccess
         public string SagsBeskrivelse { get; set; } 
         public string InterneNoter { get; set; }
         public string KlientNr { get; set; }
-        public string AdvokatId { get; set; }
-        public string YdelsesTypeNr { get; set; }
+        public int AdvokatId { get; set; }
+        public int YdelsesTypeNr { get; set; }
 
-        public Case() { }
-        public Case(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, string AdvokatId, string YdelsesTypeNr)
+        public Sag() { }
+        public Sag(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer, string TimeEstimat, string SagsBeskrivelse , string InterneNoter, string KlientNr, int AdvokatId, int YdelsesTypeNr)
         {
             this.Arbejdstitel = Arbejdstitel;
             this.StartDato = StartDato;

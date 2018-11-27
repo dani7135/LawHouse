@@ -27,7 +27,7 @@ namespace GUI
             string Adresse = Txt_Adresse.Text;
             string TelefonNr = Txt_TelefonNr.Text;
             Controller.CreateKlient(navn, Adresse, TelefonNr);
-            MessageBox.Show("oprettet");
+            MessageBox.Show("Oprettet");
             Txt_navn.Clear();
             Txt_Adresse.Clear();
             Txt_TelefonNr.Clear();

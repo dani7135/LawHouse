@@ -11,39 +11,44 @@ namespace BusinessLogic
     public class Controller
     {
         private static DatabaseCase currentDatabaseInstance = DatabaseCase.Instance();
-        public static void Update(object objectToUpdate)
+        //    private string DatabaseAdvokat currentDatabaseAdvokat = DatabaseAdvokat.Instance();
+
+        public static void CreateSag(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer,
+        string TimeEstimat, string SagsBeskrivelse, string InterneNoter, string KlientNr, int AdvokatId, int YdelsesTypeNr)
         {
-            Case @case = (Case)objectToUpdate;
-            currentDatabaseInstance.Update(@case);
+            Sag @case = new Sag(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId, YdelsesTypeNr);
+            currentDatabaseInstance.CreateSag(@case);
         }
 
-        public static List<Klient> GetAllClient()
+        public static List<Sag> GetAllSag()
         {
-            //Klient klient = new Klient();
+             List<Sag> listToReturn = currentDatabaseInstance.GetAllSag();
+            return listToReturn;
+        }
+
+        public static void UpdateSag(object objectToUpdate)
+        {
+            Sag @case = (Sag)objectToUpdate;
+            currentDatabaseInstance.UpdateSag(@case);
+        }
+
+
+        public static void CreateKlient(String Navn, string Adresse, string TelefonNr)
+        {
+            Klient KL = new Klient(Navn, Adresse, TelefonNr);
+            currentDatabaseInstance.CreateKlient(KL);
+        }
+
+        public static List<Klient> GetAllKlient()
+        {
             List<Klient> GetClient = currentDatabaseInstance.KlientList();
             return GetClient;
         }
-        public static List<Advokat> GetAllAdvokat()
-        {
-            //Advokat advokat = new Advokat();
-            List<Advokat> ad = currentDatabaseInstance.GetAllAdvokat();
-            return ad;
-        }
-        public static List<Case> GetAllCases()
-        {
-            //Case @case = new Case();
-            List<Case> listToReturn = currentDatabaseInstance.GetAllCase();
-            return listToReturn;
-        }
-        public static List<ListItems> GetAllItems()
-        {
-            //ListItems list = new ListItems();
-            List<ListItems> GetItems = currentDatabaseInstance.GetList();
-            return GetItems;
-        }
+
+
         public static List<YdelseList> GetAllYdelser()
         {
-            List<YdelseList> ydelseLists = currentDatabaseInstance.YdelsesLists();
+            List<YdelseList> ydelseLists = currentDatabaseInstance.Tjenesteydelse();
             return ydelseLists;
         }
         public static List<YdelseType> GetAllYdelseType()
@@ -52,29 +57,36 @@ namespace BusinessLogic
             return ydT;
         }
 
-        public static List<Advokat> GetAllAdvokatFromYdelse(int ydelsesTypeNr)
-        {
-            return currentDatabaseInstance.GetAllAdvokatFromYdelse(ydelsesTypeNr);
-        }
-        public static void CreateCase(string Arbejdstitel, string StartDato, string SlutDato, string Kørselstimer,
-            string TimeEstimat, string SagsBeskrivelse, string InterneNoter, string KlientNr, string AdvokatId, string YdelsesTypeNr)
-        {
-            Case @case = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId, YdelsesTypeNr);
-            currentDatabaseInstance.CreateCase(@case);
-        }
+
         public static void CreateAdvokat(int AdvokatId, string advokatNavn)
         {
             Advokat ad = new Advokat(AdvokatId, advokatNavn);
             currentDatabaseInstance.CreateAdvokat(ad);
         }
+
         public static void AddSpecialToAdvokat(string specialName, int advokatId)
         {
             currentDatabaseInstance.AddSpecialToAdvokat(specialName, advokatId);
         }
-        public static void CreateKlient(String Navn, string Adresse, string TelefonNr)
+
+
+        public static List<ListItems> GetAllItems()
         {
-            Klient KL = new Klient(Navn, Adresse, TelefonNr);
-            currentDatabaseInstance.CreateKlient(KL);
+            List<ListItems> GetItems = currentDatabaseInstance.GetList();
+            return GetItems;
         }
+
+        public static List<Advokat> GetAllAdvokat()
+        {
+            List<Advokat> ad = currentDatabaseInstance.GetAllAdvokat();
+            return ad;
+        }
+
+        public static List<Advokat> GetAllAdvokatFromYdelse(int ydelsesTypeNr)
+        {
+            return currentDatabaseInstance.GetAllAdvokatFromYdelse(ydelsesTypeNr);
+        }
+
+
     }
 }

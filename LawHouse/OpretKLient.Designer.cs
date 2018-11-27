@@ -31,7 +31,7 @@
             this.Txt_navn = new System.Windows.Forms.TextBox();
             this.Txt_Adresse = new System.Windows.Forms.TextBox();
             this.Txt_TelefonNr = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.navn = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Btn_CreateKLient = new System.Windows.Forms.Button();
@@ -40,7 +40,7 @@
             // Txt_navn
             // 
             this.Txt_navn.Location = new System.Drawing.Point(17, 16);
-            this.Txt_navn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_navn.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_navn.Name = "Txt_navn";
             this.Txt_navn.Size = new System.Drawing.Size(132, 22);
             this.Txt_navn.TabIndex = 0;
@@ -48,7 +48,7 @@
             // Txt_Adresse
             // 
             this.Txt_Adresse.Location = new System.Drawing.Point(17, 68);
-            this.Txt_Adresse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_Adresse.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_Adresse.Name = "Txt_Adresse";
             this.Txt_Adresse.Size = new System.Drawing.Size(132, 22);
             this.Txt_Adresse.TabIndex = 1;
@@ -56,22 +56,21 @@
             // Txt_TelefonNr
             // 
             this.Txt_TelefonNr.Location = new System.Drawing.Point(17, 123);
-            this.Txt_TelefonNr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_TelefonNr.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_TelefonNr.Name = "Txt_TelefonNr";
             this.Txt_TelefonNr.Size = new System.Drawing.Size(132, 22);
             this.Txt_TelefonNr.TabIndex = 2;
             // 
-            // label1
+            // navn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(199, 16);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Navn";
-
-           // 
+            this.navn.AutoSize = true;
+            this.navn.Location = new System.Drawing.Point(199, 16);
+            this.navn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.navn.Name = "navn";
+            this.navn.Size = new System.Drawing.Size(41, 17);
+            this.navn.TabIndex = 3;
+            this.navn.Text = "Navn";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -95,7 +94,7 @@
             // Btn_CreateKLient
             // 
             this.Btn_CreateKLient.Location = new System.Drawing.Point(17, 182);
-            this.Btn_CreateKLient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_CreateKLient.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_CreateKLient.Name = "Btn_CreateKLient";
             this.Btn_CreateKLient.Size = new System.Drawing.Size(221, 28);
             this.Btn_CreateKLient.TabIndex = 6;
@@ -111,11 +110,11 @@
             this.Controls.Add(this.Btn_CreateKLient);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.navn);
             this.Controls.Add(this.Txt_TelefonNr);
             this.Controls.Add(this.Txt_Adresse);
             this.Controls.Add(this.Txt_navn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "OpretKLient";
             this.Text = "OpretKlient";
             this.ResumeLayout(false);
@@ -128,7 +127,7 @@
         private System.Windows.Forms.TextBox Txt_navn;
         private System.Windows.Forms.TextBox Txt_Adresse;
         private System.Windows.Forms.TextBox Txt_TelefonNr;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label navn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Btn_CreateKLient;

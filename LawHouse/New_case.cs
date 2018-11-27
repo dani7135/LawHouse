@@ -24,16 +24,17 @@ namespace GUI
             Slutdato.MinDate = DateTime.Today;
 
             txt_YdelseTypeNr.DataSource = Controller.GetAllYdelseType();
-            txt_YdelseTypeNr.DisplayMember = "YdelsesNavn";
+            txt_YdelseTypeNr.DisplayMember = "YdelsesTypeNr";
             YdelseType ydelseType = (YdelseType)txt_YdelseTypeNr.SelectedItem;
             txt_MedarbejderNr.DataSource = Controller.GetAllAdvokatFromYdelse(ydelseType.YdelsesTypeNr);
             txt_MedarbejderNr.DisplayMember= "Navn";
+            txt_MedarbejderNr.ValueMember = "AdvokatId";
             txt_MedarbejderNr.SelectedIndex = -1;
         }
 
         private void btn_Create_Click(object sender, EventArgs e)
         {            
-            Controller.CreateCase(txt_titel.Text, StartDato.Text, Slutdato.Text, txt_kørsel.Text, txt_time.Text,  txt_SagsBeskrivelse.Text , txt_InterneNoter.Text, txt_KlientNr.Text, txt_MedarbejderNr.SelectedValue.ToString(), txt_YdelseTypeNr.SelectedValue.ToString());
+            Controller.CreateSag(txt_titel.Text, StartDato.Text, Slutdato.Text, txt_kørsel.Text, txt_time.Text,  txt_SagsBeskrivelse.Text , txt_InterneNoter.Text, txt_KlientNr.Text, (int)txt_MedarbejderNr.SelectedValue, (int)txt_YdelseTypeNr.SelectedValue);
             this.Close();
         }
 

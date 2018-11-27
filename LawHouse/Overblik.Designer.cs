@@ -113,21 +113,25 @@
             // 
             // olvColumn1
             // 
+            this.olvColumn1.IsEditable = false;
             this.olvColumn1.Width = 0;
             // 
             // SagsNr
             // 
             this.SagsNr.AspectName = "SagsNr";
+            this.SagsNr.IsEditable = false;
             this.SagsNr.Text = "SagsNr";
             // 
             // Arbejdstitel
             // 
             this.Arbejdstitel.AspectName = "Arbejdstitel";
+            this.Arbejdstitel.IsEditable = false;
             this.Arbejdstitel.Text = "Arbejdstitel";
             // 
             // StartDato
             // 
             this.StartDato.AspectName = "StartDato";
+            this.StartDato.IsEditable = false;
             this.StartDato.Text = "StartDato";
             // 
             // SlutDato
@@ -158,6 +162,7 @@
             // KlientNr
             // 
             this.KlientNr.AspectName = "KlientNr";
+            this.KlientNr.IsEditable = false;
             this.KlientNr.Text = "KlientNr";
             // 
             // MedarbejderNr
@@ -184,11 +189,13 @@
             // TelefonNr
             // 
             this.TelefonNr.AspectName = "TelefonNr";
+            this.TelefonNr.IsEditable = false;
             this.TelefonNr.Text = "TelefonNr";
             // 
             // AdvokatId
             // 
             this.AdvokatId.AspectName = "AdvokatId";
+            this.AdvokatId.IsEditable = false;
             this.AdvokatId.Text = "AdvokatId";
             // 
             // Advokat_navn
@@ -221,7 +228,7 @@
             // 
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(692, 48);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 24);
             this.comboBox1.TabIndex = 6;
@@ -230,7 +237,7 @@
             // Btn_Help
             // 
             this.Btn_Help.Location = new System.Drawing.Point(193, 48);
-            this.Btn_Help.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_Help.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_Help.Name = "Btn_Help";
             this.Btn_Help.Size = new System.Drawing.Size(100, 28);
             this.Btn_Help.TabIndex = 7;

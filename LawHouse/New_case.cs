@@ -33,7 +33,7 @@ namespace GUI
 
         private void btn_Create_Click(object sender, EventArgs e)
         {            
-            Controller.CreateCase(txt_titel.Text, StartDato.Text, Slutdato.Text, txt_kørsel.Text, txt_time.Text,  txt_SagsBeskrivelse.Text , txt_InterneNoter.Text, txt_KlientNr.Text, txt_MedarbejderNr.Text, txt_YdelseTypeNr.Text);
+            Controller.CreateCase(txt_titel.Text, StartDato.Text, Slutdato.Text, txt_kørsel.Text, txt_time.Text,  txt_SagsBeskrivelse.Text , txt_InterneNoter.Text, txt_KlientNr.Text, txt_MedarbejderNr.SelectedValue.ToString(), txt_YdelseTypeNr.SelectedValue.ToString());
             this.Close();
         }
 

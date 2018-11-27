@@ -147,7 +147,7 @@ namespace DataAccess
                         while (sqld.Read())
                         {
                             YdelseList ydelse = new YdelseList();
-                            ydelse.AdvokatId = sqld["AdvokatId"].ToString();
+                            ydelse.AdvokatId = sqld["AdvokatId"].ToString();//SKal nok laves om
                             ydelse.YdelsesTypeNr = sqld["YdelsesTypeNr"].ToString();
                             All.Add(ydelse);
                         }
@@ -219,7 +219,7 @@ namespace DataAccess
                         while (sqld.Read())
                         {
                             Advokat @advokat = new Advokat();
-                            @advokat.AdvokatId = sqld["AdvokatId"].ToString();
+                            @advokat.AdvokatId = Convert.ToInt32(sqld["AdvokatId"]);
                             @advokat.Navn = sqld["Navn"].ToString();
                             All.Add(@advokat);
                         }
@@ -245,7 +245,7 @@ namespace DataAccess
                         while (sqld.Read())
                         {
                             Advokat @advokat = new Advokat();
-                            @advokat.AdvokatId = sqld["AdvokatId"].ToString();
+                            @advokat.AdvokatId = Convert.ToInt32(sqld["AdvokatId"]);
                             @advokat.Navn = sqld["Navn"].ToString();
                             All.Add(@advokat);
                         }

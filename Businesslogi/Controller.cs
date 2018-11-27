@@ -62,7 +62,7 @@ namespace BusinessLogic
             Case @case = new Case(Arbejdstitel, StartDato, SlutDato, Kørselstimer, TimeEstimat, SagsBeskrivelse, InterneNoter, KlientNr, AdvokatId, YdelsesTypeNr);
             currentDatabaseInstance.CreateCase(@case);
         }
-        public static void CreateAdvokat(string AdvokatId, string advokatNavn)
+        public static void CreateAdvokat(int AdvokatId, string advokatNavn)
         {
             Advokat ad = new Advokat(AdvokatId, advokatNavn);
             currentDatabaseInstance.CreateAdvokat(ad);
